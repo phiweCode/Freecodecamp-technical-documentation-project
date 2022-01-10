@@ -3,11 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Freecodecamp tachnical documentation project </title>
 
+</head>
+<body>     
+<!-- This is the main header of the web page  -->
+<header id="main-header" >
+
+   <div id="logo">  
+        
+        <img style="color: aqua" src="download.svg" />
+         <p>React</p>
+
+   </div>  
+
+   <nav id="main-nav">
+       <ul class="page-links">
+           <li>Docs</li>
+           <li>Tutorial</li>
+           <li>Blog</li>
+           <li>Community</li>
+       </ul>
+   </nav>  
+
+   <div class="search-and-lang">
+    <div>
+        <i class="fa fa-magnifying-glass"></i>
+    </div>
+    <div>
+        v17.0.2
+    </div>
+     <div>
+         <i class="fa  fa-language"></i>
+     </div>
+     <div>
+         Languages
+     </div>
+   </div>
+
+</header> 
+<!-- This is the end of the websites main header-->
+
+<!-- The showcase area contains both main technical document and its navbar-->
+<div class="showcase-area"> 
+ 
  <!-- This is navigation section for the technical documentation-->
 
 <div class="nav">
@@ -17,9 +59,43 @@
      <header>
           section-1 
      </header> 
+   <label for="link-dropdonwn-1">INSTALLATION</label>
+     <select id="link-dropdonwn-1"> 
+         <option value=""><a href="" class="nav-links">Getting Started</a></option>
+         <option value=""><a href="" class="nav-links">Add React to a Website</a></option>
+         <option value=""><a href="" class="nav-links">Create a New React App</a></option>
+         <option value=""><a href="" class="nav-links">CDN Links</a></option>
+         <option value=""><a href="" class="nav-links">Release Channels</a></option>
+     </select> 
 
-     <a class="nav-link" href="http://" target="_blank" rel="noopener noreferrer"></a>
-     </a>   
+              <label for="link-dropdonwn-2">MAIN CONCEPTS</label>
+          <select id="link-dropdonwn-2"> 
+           </select> 
+           
+           <label for="link-dropdonwn-3">ADVANCED GUIDES</label>
+          <select id="link-dropdonwn-3"> 
+           </select>
+       
+              <label for="link-dropdonwn-4">API REFERENCE</label>
+          <select id="link-dropdonwn-4"> 
+           </select> 
+       
+             <label for="link-dropdonwn-5">HOOKS</label>
+          <select id="link-dropdonwn-5"> 
+           </select>
+       
+             <label for="link-dropdonwn-6">TESTING</label>
+          <select id="link-dropdonwn-6"> 
+           </select>
+       
+             <label for="link-dropdonwn-7">CONTRIBUTING</label>
+          <select id="link-dropdonwn-7"> 
+           </select>
+       
+              <label for="link-dropdonwn-8">FAQ</label>
+          <select id="link-dropdonwn"> 
+           </select>
+       
 
      </nav>
 
@@ -33,32 +109,211 @@
 
 <main id="main-doc">    
 
-<div class="main-container">    
+    <div class="main-doc-container">    
 
-    <div class="section-container">  
+    <section class="main-section" id="section_1"> 
 
-        <section class="main-section" id="section_1"> 
-           <header>section-1</header> 
-           <p class="params"> 
-               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-               Quod illo dignissimos aspernatur distinctio quis ipsam ab, reiciendis inventore error voluptatem odit accusamus cum 
-               molestias veniam nemo itaque quo iure labore.
-
+           <header><h1>Getting Started</h1></header> 
+           
+           <p class="param1"> 
+              This page is an overview of the React documentation and related resources.
+           </p> 
+             
+           <p class="params2">
+               <span class="Keywords">React</span>is a JavaScript library for building user interfaces. Learn what React is all about on <span class="inline-links">our homepage</span> or <span class="lnline-links">in the tutorial</span>.
            </p>
+           <hr>
            <ul>
-               <li>one </li>
-               <li>two </li>
-               <li>three </li>
-           </ul>
-        </section>
+            <li><span class="inline-links">Try React</span></li>
+            <li><span class="inline-links">Learn React</span></li>
+            <li><span class="inline-links">Staying Informed</span></li>
+            <li><span class="inline-links">Versioned Documentation</span></li>
+            <li><span class="inline-links">Something Missing?</span></li>
+           </ul>  
+
+           <hr> 
+
+           <div class="sub-sections">
+               <h3>Try React</h3>
+               <p class="params2">
+                   React has been designed from the start
+                    for gradual adoption, 
+                    and <span class="keywords"> you can use as little or as much React as you need</span>. Whether you want to get a taste of React, 
+                    add some interactivity to a simple HTML page, or start a complex 
+                    React-powered app, the links in this section will help you get started.
+               </p>
+           </div> 
+
+           <div class="sub-sections">
+               <h3>Online Playgrounds</h3>
+            <p class="params2">
+             If you’re interested in playing around with React, you can use an online code playground. Try a Hello World template on <span class="inline-links">CodePen</span>, <span class="inline-links">CodeSandbox</span>,or<span class="inline-links"> Stackblitz</span>.
+            </p>
+             <p>
+                 If you prefer to use your own text editor, you can also <span class="inline-links">download this HTML file</span>, edit it, and open it from the local filesystem in your browser. It does a slow runtime code transformation, so we’d only recommend using this for simple demos.
+             </p>
+            </div>
+
+           <div class="sub-sections">
+               <h3>Add React to a Website</h3>
+            <p class="params2">
+               You can <span class="inline-links">add React to an HTML page in one minute</span>. You can then either gradually expand its presence, or keep it contained to a few dynamic widgets.
+            </p>
+
+            </div> 
+
+           <div class="sub-sections">
+               <h3>Create a New React App</h3>
+            <p class="params2">
+              When starting a React project, a <span class="inline-links">simple HTML page with script tags</span> might still be the best option. It only takes a minute to set up! 
+            </p>
+
+            <p class="params2">
+           As your application grows, you might want to consider a more integrated setup. There are several JavaScript toolchains we recommend for larger applications. Each of them can work with little to no configuration and lets you take full advantage of the rich React ecosystem. <span class="inline-links">Learn how</span>.
+           </p>  
+           </div>  
+
+            <hr>
+
+           <div class="sub-sections">
+               <h3>Learn React</h3>
+            <p class="params2">
+             People come to React from different backgrounds and with different learning styles. Whether you prefer a more theoretical or a practical approach, we hope you’ll find this section helpful.
+            </p> 
+
+            <ul>
+                <li>
+                    <p class="params2"> 
+                        If you prefer to <span class="keywords"> 
+                        learn by doing</span>, start with our <span class="inline-links">practical tutorial</span>.
+                    </p>
+                </li>
+                <li>
+                    <p class="params2">
+                        If you prefer to <span class="keywords"> learn concepts step by step</span>, start with our guide to <span class="inline-links">main concepts</span>.
+                    </p>
+                </li>
+            </ul>
+
+            <p class="params2">
+           Like any unfamiliar technology, React does have a learning curve. With practice and some patience, you will get the hang of it.
+           </p> 
+
+           </div>  
+
+             <div class="sub-sections">
+               <h3>First Examples</h3>
+            <p class="params2">
+              The <span class="inline-links">React homepage</span> contains a few small React examples with a live editor. Even if you don’t know anything about React yet, try changing their code and see how it affects the result.
+            </p>
+            </div> 
+
+            <div class="sub-sections">
+               <h3>React for Beginners</h3>
+            <p class="params2">
+            If you feel that the React documentation goes at a faster pace than you’re comfortable with, check out this <span class="inline-links"> overview of React by Tania Rascia</span>. It introduces the most important React concepts in a detailed, beginner-friendly way. Once you’re done, give the documentation another try!
+            </p>
+            </div> 
+
+            <div class="sub-sections">
+               <h3>React for Designers</h3>
+            <p class="params2">
+            If you’re coming from a design background, <span class="inline-links">these resources</span> are a great place to get started.
+            </p>
+            </div> 
+
+            <div class="sub-sections">
+               <h3>React for Designers</h3>
+            <p class="params2">
+           The React documentation assumes some familiarity with programming in the JavaScript language. You don’t have to be an expert, but it’s harder to learn both React and JavaScript at the same time.
+            </p>
+            <p class="params2">
+            We recommend going through <span class="inline-links">this JavaScript overview</span> to check your knowledge level. It will take you between 30 minutes and an hour but you will feel more confident learning React.
+           </p>
+            </div> 
+
+            <div class="tip-sections">
+               <h3>Tip</h3>
+            <p class="params2">
+           Whenever you get confused by something in JavaScript, 
+           <span class="inline-links">MDN</span> and <span class="inline-links">javascript</span>.info are great websites to check. There are also <span class="inline-links">community support forums</span> where you can ask for help.</p>
+            </div>
+
+            <div class="sub-sections">
+               <h3>Practical Tutorial</h3>
+            <p class="params2">
+                If you prefer to <span class="keywords">learn by doing</span>, check out our <span class="inline-links">practical tutorial</span>. In this tutorial, we build a tic-tac-toe game in React. You might be tempted to skip it because you’re not into building games — but give it a chance. The techniques you’ll learn in the tutorial are fundamental to building any React apps, and mastering it will give you a much deeper understanding.
+            </p>
+            </div>
+
+            <div class="sub-sections">
+               <h3>Step-by-Step Guide</h3>
+            <p class="params2">
+             If you prefer to <span class="keywords">learn concepts step by step</span>, our <span class="inline-links">guide to main concepts</span> is the best place to start. Every next chapter in it builds on the knowledge introduced in the previous chapters so you won’t miss anything as you go along.
+             </p>
+            </div>
+
+            <div class="sub-sections">
+               <h3>Step-by-Step Guide</h3>
+            <p class="params2">
+            Sometimes people find third-party books and video courses more helpful than the official documentation. We maintain a <span class="inline-links">list of commonly recommended resources</span>, some of which are free. 
+            </p>
+            </div>
+
+            <div class="sub-sections">
+               <h3>API Reference</h3>
+            <p class="params2">
+           This documentation section is useful when you want to learn more details about a particular React API. For example, <span class="inline-links">React.Component API reference</span> can provide you with details on how <span class="highlight">setState()</span> works, and what different lifecycle methods are useful for.
+           </p>
+            </div>
+
+            <div class="sub-sections">
+               <h3>Glossary and FAQ</h3>
+            <p class="params2">
+          The <span class="inline-links">glossary</span> contains an overview of the most common terms you’ll see in the React documentation. There is also a FAQ section dedicated to short questions and answers about common topics, including making <span class="inline-links">AJAX requests</span>, <span class="inline-links">component state</span>, and <span class="inline-links">file structure</span>.</p>
+            </div>
+
+            <div class="sub-sections">
+               <h3>Staying Informed</h3>
+
+            <p class="params2">
+         The <span class="inline-links">React blog</span> is the official source for the updates from the React team. Anything important, including release notes or deprecation notices, will be posted there first.
+             </p> 
+
+            <p class="params2">
+        You can also follow the <span class="inline-links">@reactjs account</span> on Twitter, but you won’t miss anything essential if you only read the blog. </p> 
+
+            <p class="params2">
+        Not every React release deserves its own blog post, but you can find a detailed changelog for every release in the <span class="inline-links">CHANGELOG.md file in the React repository</span>, as well as on the <span class="inline-links">Releases</span> page. 
+          </p> 
+
+            </div> 
+
+             <div class="sub-sections">
+               <h3>Versioned Documentation</h3>
+            <p class="params2">
+           This documentation always reflects the latest stable version of React. Since React 16, you can find older versions of the documentation on a <span class="inline-links">separate page</span>. Note that documentation for past versions is snapshotted at the time of the release, and isn’t being continuously update</p>
+            </div> 
+
+             <div class="sub-sections">
+               <h3>Something Missing?</h3>
+            <p class="params2">
+          If something is missing in the documentation or if you found some part confusing, please file an issue for the documentation repository with your suggestions for improvement, or tweet at the @reactjs account. We love hearing from you!</div> 
+
+            
+
+
+           
+
+    </section>
 
     </div> 
-
-     </div>
 
 </main> 
 
 <!-- This is the end of the main section of the Technical documenttation -->
-    
+
+</div> 
+
 </body>
 </html>
