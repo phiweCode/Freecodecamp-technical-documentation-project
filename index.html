@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="javascript.js" defer ></script>
     <title>Freecodecamp tachnical documentation project </title>
 
 </head>
@@ -30,18 +31,27 @@
    </nav>  
 
    <div class="search-and-lang">
-    <div>
-        <i class="fa fa-magnifying-glass"></i>
+    <div class="search-div" >
+        <i class="fa fa-magnifying-glass"></i> 
+        <input id="search-textarea" type="text" placeholder="Search" >
     </div>
     <div>
         v17.0.2
     </div>
      <div>
-         <i class="fa  fa-language"></i>
+         <i class="fa fa-2x fa-language"></i>
      </div>
      <div>
          Languages
+     </div> 
+    
+     <div class="Github">  
+          <span>GitHub</span>
+          <i class="fa fa-link"></i>
+         
      </div>
+     </div>
+      
    </div>
 
 </header> 
@@ -50,58 +60,6 @@
 <!-- The showcase area contains both main technical document and its navbar-->
 <div class="showcase-area"> 
  
- <!-- This is navigation section for the technical documentation-->
-
-<div class="nav">
-
-     <nav id="navbar"> 
-
-     <header>
-          section-1 
-     </header> 
-   <label for="link-dropdonwn-1">INSTALLATION</label>
-     <select id="link-dropdonwn-1"> 
-         <option value=""><a href="" class="nav-links">Getting Started</a></option>
-         <option value=""><a href="" class="nav-links">Add React to a Website</a></option>
-         <option value=""><a href="" class="nav-links">Create a New React App</a></option>
-         <option value=""><a href="" class="nav-links">CDN Links</a></option>
-         <option value=""><a href="" class="nav-links">Release Channels</a></option>
-     </select> 
-
-              <label for="link-dropdonwn-2">MAIN CONCEPTS</label>
-          <select id="link-dropdonwn-2"> 
-           </select> 
-           
-           <label for="link-dropdonwn-3">ADVANCED GUIDES</label>
-          <select id="link-dropdonwn-3"> 
-           </select>
-       
-              <label for="link-dropdonwn-4">API REFERENCE</label>
-          <select id="link-dropdonwn-4"> 
-           </select> 
-       
-             <label for="link-dropdonwn-5">HOOKS</label>
-          <select id="link-dropdonwn-5"> 
-           </select>
-       
-             <label for="link-dropdonwn-6">TESTING</label>
-          <select id="link-dropdonwn-6"> 
-           </select>
-       
-             <label for="link-dropdonwn-7">CONTRIBUTING</label>
-          <select id="link-dropdonwn-7"> 
-           </select>
-       
-              <label for="link-dropdonwn-8">FAQ</label>
-          <select id="link-dropdonwn"> 
-           </select>
-       
-
-     </nav>
-
-</div> 
-
-<!-- This is the end of the navigation section --> 
 
 <!--  --> 
 
@@ -300,11 +258,6 @@
             <p class="params2">
           If something is missing in the documentation or if you found some part confusing, please file an issue for the documentation repository with your suggestions for improvement, or tweet at the @reactjs account. We love hearing from you!</div> 
 
-            
-
-
-           
-
     </section>
 
     </div> 
@@ -312,6 +265,77 @@
 </main> 
 
 <!-- This is the end of the main section of the Technical documenttation -->
+
+<!-- --> 
+
+ <!-- This is navigation section for the technical documentation-->
+
+<div class="nav">
+
+   
+     
+     <nav id="navbar"> 
+   
+            <div>      
+            <label for="link-dropdonwn-1">INSTALLATION</label>
+            <select class="dropdown" id="link-dropdonwn-1"> 
+                <option value=""><a href="" class="nav-links"></a></option>
+                <option value=""><a href="" class="nav-links">Getting Started</a></option>
+                <option value=""><a href="" class="nav-links">Add React to a Website</a></option>
+                <option value=""><a href="" class="nav-links">Create a New React App</a></option>
+                <option value=""><a href="" class="nav-links">CDN Links</a></option>
+                <option value=""><a href="" class="nav-links">Release Channels</a></option>
+            </select>
+            </div> 
+               
+            <div> 
+              <label for="link-dropdonwn-2">MAIN CONCEPTS</label>
+          <select  class="dropdown" id="link-dropdonwn-2"> 
+           </select> 
+           </div>
+          
+           <div>  
+           <label for="link-dropdonwn-3">ADVANCED GUIDES</label>
+          <select  class="dropdown" id="link-dropdonwn-3"> 
+           </select>
+           </div> 
+              
+              <div>  
+              <label for="link-dropdonwn-4">API REFERENCE</label>
+          <select  class="dropdown" id="link-dropdonwn-4"> 
+           </select> 
+           </div>
+       
+            <div>  
+             <label for="link-dropdonwn-5">HOOKS</label>
+          <select  class="dropdown" id="link-dropdonwn-5"> 
+           </select>
+           </div>
+             
+            <div> 
+             <label for="link-dropdonwn-6">TESTING</label>
+          <select  class="dropdown" id="link-dropdonwn-6"> 
+           </select>
+           </div> 
+            
+             <div>  
+             <label for="link-dropdonwn-7">CONTRIBUTING</label>
+          <select  class="dropdown" id="link-dropdonwn-7"> 
+           </select>
+           </div>
+             
+           <div>  
+              <label for="link-dropdonwn-8">FAQ</label>
+          <select  class="dropdown" id="link-dropdonwn"> 
+           </select>
+           </div>
+       
+
+     </nav>
+
+</div> 
+
+<!-- This is the end of the navigation section --> 
 
 </div> 
 
