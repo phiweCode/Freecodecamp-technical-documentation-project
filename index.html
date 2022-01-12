@@ -78,9 +78,11 @@
            </p> 
              
            <p class="params2">
-               <span class="Keywords">React</span>is a JavaScript library for building user interfaces. Learn what React is all about on <span class="inline-links">our homepage</span> or <span class="lnline-links">in the tutorial</span>.
+               <span class="keywords">React</span>is a JavaScript library for building user interfaces. Learn what React is all about on <span class="inline-links">our homepage</span> or <span class="inline-links">in the tutorial</span>.
            </p>
+
            <hr>
+
            <ul>
             <li><span class="inline-links">Try React</span></li>
             <li><span class="inline-links">Learn React</span></li>
@@ -92,7 +94,7 @@
            <hr> 
 
            <div class="sub-sections">
-               <h3>Try React</h3>
+               <h3 class="large-header" >Try React</h3>
                <p class="params2">
                    React has been designed from the start
                     for gradual adoption, 
@@ -134,7 +136,7 @@
             <hr>
 
            <div class="sub-sections">
-               <h3>Learn React</h3>
+               <h3  class="large-header">Learn React</h3>
             <p class="params2">
              People come to React from different backgrounds and with different learning styles. Whether you prefer a more theoretical or a practical approach, we hope you’ll find this section helpful.
             </p> 
@@ -232,7 +234,7 @@
             </div>
 
             <div class="sub-sections">
-               <h3>Staying Informed</h3>
+               <h3  class="large-header">Staying Informed</h3>
 
             <p class="params2">
          The <span class="inline-links">React blog</span> is the official source for the updates from the React team. Anything important, including release notes or deprecation notices, will be posted there first.
@@ -248,13 +250,13 @@
             </div> 
 
              <div class="sub-sections">
-               <h3>Versioned Documentation</h3>
+               <h3  class="large-header">Versioned Documentation</h3>
             <p class="params2">
            This documentation always reflects the latest stable version of React. Since React 16, you can find older versions of the documentation on a <span class="inline-links">separate page</span>. Note that documentation for past versions is snapshotted at the time of the release, and isn’t being continuously update</p>
             </div> 
 
              <div class="sub-sections">
-               <h3>Something Missing?</h3>
+               <h3  class="large-header">Something Missing?</h3>
             <p class="params2">
           If something is missing in the documentation or if you found some part confusing, please file an issue for the documentation repository with your suggestions for improvement, or tweet at the @reactjs account. We love hearing from you!</div> 
 
@@ -277,15 +279,61 @@
      <nav id="navbar"> 
    
             <div>      
-            <label for="link-dropdonwn-1">INSTALLATION</label>
-            <select class="dropdown" id="link-dropdonwn-1"> 
-                <option value=""><a href="" class="nav-links"></a></option>
-                <option value=""><a href="" class="nav-links">Getting Started</a></option>
-                <option value=""><a href="" class="nav-links">Add React to a Website</a></option>
-                <option value=""><a href="" class="nav-links">Create a New React App</a></option>
-                <option value=""><a href="" class="nav-links">CDN Links</a></option>
-                <option value=""><a href="" class="nav-links">Release Channels</a></option>
-            </select>
+
+            <div class="menu"> 
+
+            <label for="link-dropdonwn-1">INSTALLATION</label> 
+             <select  class="dropdown" id="link-dropdonwn-2"> </select>
+            </div>
+
+            <ul class="dropdowns" id="link-dropdonwn-1"> 
+
+                <li> 
+                    <a href="" class="nav-links">
+                    <label  class="radio-label" for="Getting_Started">
+                        <input id="Getting_Started" type="radio" name="nav-links" ></input>Getting Started
+                        <span class="checkmark"></span>
+                    </label>
+                      </a>
+               </li>
+                
+                <li> 
+                    <a href="" class="nav-links">
+                    <label class="radio-label" for="Add_React_to_a_Website">
+                        <input id="Add_React_to_a_Website" type="radio" name="nav-links" ></input>Add React to a Website
+                        <span class="checkmark"></span>
+                    </label>
+                 </a>
+                </li>
+                
+                <li> 
+                    <a href="" class="nav-links"> 
+                    <label  class="radio-label"for="Create_a_New_React_App">
+                        <input id="Create_a_New_React_App" type="radio" name="nav-links" ></input>Create a New React App
+                        <span class="checkmark"></span>
+                    </label>
+                      </a>
+                    </li>
+                
+                <li> 
+                    <a href="" class="nav-links">
+                    <label  class="radio-label"for="CDN_Links">
+                        <input id="CDN_Links" type="radio" name="nav-links" ></input>CDN Links
+                        <span class="checkmark"></span>
+                    </label>
+                      </a>
+                </li>
+                
+                <li> 
+                    <a href="" class="nav-links">
+                    <label  class="radio-label"for="Release_Channels">
+                        <input id="Release_Channels" type="radio" name="nav-links" ></input>Release Channels<span class="checkmark"></span>
+                    </label>
+                      </a>
+                </li>
+        
+            </ul> 
+
             </div> 
                
             <div> 
@@ -340,4 +388,5 @@
 </div> 
 
 </body>
-</html>
+</html> 
+
