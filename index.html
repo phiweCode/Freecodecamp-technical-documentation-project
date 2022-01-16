@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="javascript.js" defer ></script>
     <title>Freecodecamp tachnical documentation project </title>
 
@@ -109,7 +110,7 @@
             <p class="params2">
              If you’re interested in playing around with React, you can use an online code playground. Try a Hello World template on <span class="inline-links">CodePen</span>, <span class="inline-links">CodeSandbox</span>,or<span class="inline-links"> Stackblitz</span>.
             </p>
-             <p>
+             <p class="params2">
                  If you prefer to use your own text editor, you can also <span class="inline-links">download this HTML file</span>, edit it, and open it from the local filesystem in your browser. It does a slow runtime code transformation, so we’d only recommend using this for simple demos.
              </p>
             </div>
@@ -299,76 +300,84 @@
    
             <div>      
 
-            <div class="menu"> 
+                <div class="menu"> 
 
-            <label id="label-1" for="link-dropdonwn-1"><label for="link-dropdonwn-8"> <label for="INSTALLATION"> <input class="header-radio" id="INSTALLATION" type="radio" name="nav-headers">INSTALLATION</label> 
-              <select  class="dropdown" id="link-dropdonwn-2"> </select>
-            </div>
-  
-            <ul class="dropdowns" id="link-dropdonwn-1"> 
+                    <label  for="link-dropdonwn-1">
+                            <label class="nav-header-label" for="INSTALLATION"> 
+                                <input class="header-radio" id="INSTALLATION" type="radio" name="nav-headers" data-waschecked="true">INSTALLATION
+                            </label> 
+                    </label>
+                    <select  class="dropdown" id="link-dropdonwn-2"> </select>
+                </div>
+    
+                <ul class="dropdowns" id="link-dropdonwn-1"> 
 
-                    <li class="ul"> 
-                        <a href="" class="nav-links">
-                        <label  class="radio-label" for="Getting_Started">
-                            <input id="Getting_Started" type="radio" name="nav-links" ></input>Getting Started
-                            <span class="checkmark"></span>
-                        </label>
+                        <li class="ul"> 
+                            <a href="" class="nav-links">
+                            <label  class="radio-label" for="Getting_Started">
+                                <input id="Getting_Started" type="radio" name="nav-links" ></input>Getting Started
+                                <span class="checkmark"></span>
+                            </label>
+                            </a>
+                        </li>
+                        
+                        <li class="ul"> 
+                            <a href="" class="nav-links">
+                            <label class="radio-label" for="Add_React_to_a_Website">
+                                <input id="Add_React_to_a_Website" type="radio" name="nav-links" ></input>Add React to a Website
+                                <span class="checkmark"></span>
+                            </label>
                         </a>
+                        </li>
+                        
+                        <li class="ul"> 
+                            <a href="" class="nav-links"> 
+                            <label  class="radio-label"for="Create_a_New_React_App">
+                                <input id="Create_a_New_React_App" type="radio" name="nav-links" ></input>Create a New React App
+                                <span class="checkmark"></span>
+                            </label>
+                            </a>
+                        </li>
+                        
+                        <li class="ul"> 
+                            <a href="" class="nav-links">
+                            <label  class="radio-label"for="CDN_Links">
+                                <input id="CDN_Links" type="radio" name="nav-links" ></input>CDN Links
+                                <span class="checkmark"></span>
+                            </label>
+                            </a>
+                        </li>
+                        
+                        <li class="ul"> 
+                            <a href="" class="nav-links">
+                            <label  class="radio-label"for="Release_Channels">
+                                <input id="Release_Channels" type="radio" name="nav-links" ></input>Release Channels
+                                <span class="checkmark"></span>
+                            </label>
+                            </a>
                     </li>
-                    
-                    <li class="ul"> 
-                        <a href="" class="nav-links">
-                        <label class="radio-label" for="Add_React_to_a_Website">
-                            <input id="Add_React_to_a_Website" type="radio" name="nav-links" ></input>Add React to a Website
-                            <span class="checkmark"></span>
-                        </label>
-                    </a>
-                    </li>
-                    
-                    <li class="ul"> 
-                        <a href="" class="nav-links"> 
-                        <label  class="radio-label"for="Create_a_New_React_App">
-                            <input id="Create_a_New_React_App" type="radio" name="nav-links" ></input>Create a New React App
-                            <span class="checkmark"></span>
-                        </label>
-                        </a>
-                    </li>
-                    
-                    <li class="ul"> 
-                        <a href="" class="nav-links">
-                        <label  class="radio-label"for="CDN_Links">
-                            <input id="CDN_Links" type="radio" name="nav-links" ></input>CDN Links
-                            <span class="checkmark"></span>
-                        </label>
-                        </a>
-                    </li>
-                    
-                    <li class="ul"> 
-                        <a href="" class="nav-links">
-                        <label  class="radio-label"for="Release_Channels">
-                            <input id="Release_Channels" type="radio" name="nav-links" ></input>Release Channels<span class="checkmark"></span>
-                        </label>
-                        </a>
-                </li>
-        
-            </ul>  
+            
+                </ul>  
 
             </div> 
                
             <div>  
 
-           <div class="menu"> 
+             <div class="menu"> 
 
-              <label for="link-dropdonwn-2"><label for="link-dropdonwn-8"> <label for="MAIN_CONCEPTS"> <input class="header-radio"  id="MAIN_CONCEPTS" type="radio" name="nav-headers">MAIN CONCEPTS</label>
-               <select  class="dropdown" id="link-dropdonwn-2"> 
-               </select>  
+              <label for="link-dropdonwn-2">
+                  <label class="nav-header-label" for="MAIN_CONCEPTS"> 
+                      <input class="header-radio"  id="MAIN_CONCEPTS" type="radio" name="nav-headers">MAIN CONCEPTS
+                  </label>
+              </label>
+              <select  class="dropdown" id="link-dropdonwn-2"></select>  
 
             </div>
               
 
               <ul class="dropdowns" id="link-dropdonwn-1"> 
               
-                    <li class="ol"> 
+                    <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Hello_World">
                             <input id="Hello_World" type="radio" name="nav-links" ></input>1. Hello World!
@@ -377,7 +386,7 @@
                         </a>
                     </li>
               
-                    <li class="ol"> 
+                    <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Introducing_JSX">
                             <input id="Introducing_JSX" type="radio" name="nav-links" ></input>2. Introducing JSX
@@ -386,7 +395,7 @@
                         </a>
                     </li>
               
-                    <li class="ol"> 
+                    <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Rendering_Elements">
                             <input id="Rendering_Elements" type="radio" name="nav-links" ></input>3. Rendering Elements
@@ -395,7 +404,7 @@
                         </a>
                     </li>
               
-                    <li class="ol"> 
+                    <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Components_and_Props">
                             <input id="Components_and_Props" type="radio" name="nav-links" ></input>4. Components and Props
@@ -404,7 +413,7 @@
                         </a>
                     </li> 
               
-                    <li class="ol"> 
+                    <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="States_and_Lifecycle">
                             <input id="States_and_Lifecycle" type="radio" name="nav-links" ></input>5. States and Lifecycle
@@ -413,7 +422,7 @@
                         </a>
                     </li> 
               
-                    <li class="ol"> 
+                    <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Handling_Events">
                             <input id="Handling_Events" type="radio" name="nav-links" ></input>6. Handling Events 
@@ -422,7 +431,7 @@
                         </a>
                     </li> 
               
-                    <li class="ol"> 
+                    <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Conditional_Rendering">
                             <input id="Conditional_Rendering" type="radio" name="nav-links" ></input>7. Conditional Rendering
@@ -431,7 +440,7 @@
                         </a>
                     </li> 
               
-                    <li class="ol"> 
+                    <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="List_and_Keys">
                             <input id="List_and_Keys" type="radio" name="nav-links" ></input>8. List and Keys 
@@ -440,7 +449,7 @@
                         </a>
                     </li> 
               
-                    <li class="ol"> 
+                    <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Forms">
                             <input id="Forms" type="radio" name="nav-links" ></input>9. Forms 
@@ -449,7 +458,7 @@
                         </a>
                     </li> 
               
-                    <li class="ol"> 
+                    <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Lifting_State_Up">
                             <input id="Lifting_State_Up" type="radio" name="nav-links" ></input>10. Lifting State Up
@@ -458,7 +467,7 @@
                         </a>
                     </li> 
               
-                    <li class="ol"> 
+                    <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Composition_vs_Inheritance">
                             <input id="Composition_vs_Inheritance" type="radio" name="nav-links" ></input>11. Composition vs Inheritance
@@ -467,7 +476,7 @@
                         </a>
                     </li> 
               
-                    <li class="ol"> 
+                    <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Thinking_In_React">
                             <input id="Thinking_In_React" type="radio" name="nav-links" ></input>12. Thinking In React 
@@ -483,13 +492,17 @@
            <div>   
 
             <div class="menu"> 
-               <label for="link-dropdonwn-3"><label for="link-dropdonwn-8"> <label for="ADVANCED_GUIDES"> <input class="header-radio"  id="ADVANCED_GUIDES" type="radio" name="nav-headers">ADVANCED GUIDES</label>
-               <select  class="dropdown" id="link-dropdonwn-3"></select> 
+               <label for="link-dropdonwn-3"> 
+                   <label class="nav-header-label" for="ADVANCED_GUIDES"> 
+                       <input class="header-radio"  id="ADVANCED_GUIDES" type="radio" name="nav-headers">ADVANCED GUIDES
+                       </label>
+                </label>
+                   <select  class="dropdown" id="link-dropdonwn-3"></select> 
             </div> 
 
             <ul class="dropdowns" id="link-dropdonwn-1">  
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Accessibility">
                             <input id="Accessibility" type="radio" name="nav-links" ></input>Accessibility
@@ -498,7 +511,7 @@
                         </a>
                 </li> 
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Code_Spliting">
                             <input id="Code_Splitting" type="radio" name="nav-links" ></input>Code-Splitting 
@@ -507,7 +520,7 @@
                         </a>
                 </li> 
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Context">
                             <input id="Context" type="radio" name="nav-links" ></input>Context
@@ -516,7 +529,7 @@
                         </a>
                 </li> 
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Error_Boundaries">
                             <input id="Error_Boundaries" type="radio" name="nav-links" ></input>Error Boundaries
@@ -525,7 +538,7 @@
                         </a>
                 </li> 
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Forwarding_Refs">
                             <input id="Forwarding_Refs" type="radio" name="nav-links" ></input>Forwarding Refs 
@@ -534,7 +547,7 @@
                         </a>
                 </li> 
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Fragments">
                             <input id="Fragments" type="radio" name="nav-links" ></input>Fragments 
@@ -543,7 +556,7 @@
                         </a>
                 </li> 
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Higher_Order_Components">
                             <input id="Higher_Order_Components" type="radio" name="nav-links" ></input>Higher Order Components 
@@ -552,7 +565,7 @@
                         </a>
                 </li> 
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Intergrating_with_other_Libraries">
                             <input id="Intergrating_with_other_Libraries" type="radio" name="nav-links" ></input>Intergrating with Other Libraries 
@@ -561,7 +574,7 @@
                         </a>
                 </li> 
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="JSX_In_Depth">
                             <input id="JSX_In_Depth" type="radio" name="nav-links" ></input>JSX in Depth 
@@ -570,7 +583,7 @@
                         </a>
                 </li> 
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Optimizing_Performance">
                             <input id="Optimizing_Performance" type="radio" name="nav-links" ></input>Optimizing Perfomace 
@@ -579,7 +592,7 @@
                         </a>
                 </li> 
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Portals">
                             <input id="Portals" type="radio" name="nav-links" ></input>Portals
@@ -588,7 +601,7 @@
                         </a>
                 </li> 
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="React_Without_ES6">
                             <input id="React_Without_ES6" type="radio" name="nav-links" ></input>React Without ES6 
@@ -597,7 +610,7 @@
                         </a>
                 </li> 
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="React_Without_JSX">
                             <input id="React_Without_JSX" type="radio" name="nav-links" ></input>React Without JSX
@@ -606,7 +619,7 @@
                         </a>
                 </li> 
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Reconsiliation">
                             <input id="Reconsiliation" type="radio" name="nav-links" ></input>Reconsiliation
@@ -615,7 +628,7 @@
                         </a>
                 </li> 
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Refs_and_the_DOM">
                             <input id="Refs_and_the_DOM" type="radio" name="nav-links" ></input>Refs_and_the_DOM
@@ -624,7 +637,7 @@
                         </a>
                 </li> 
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Render_Props">
                             <input id="Render_Props" type="radio" name="nav-links" ></input>Render Props
@@ -633,7 +646,7 @@
                         </a>
                 </li> 
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Static_Type_Checking">
                             <input id="Static_Type_Checking" type="radio" name="nav-links" ></input>Static Type Checking 
@@ -642,7 +655,7 @@
                         </a>
                 </li> 
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Strict_Mode">
                             <input id="Strict_Mode" type="radio" name="nav-links" ></input>Strict Mode 
@@ -651,7 +664,7 @@
                         </a>
                 </li> 
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Typechecking_With_PropTypes">
                             <input id="Typechecking_With_PropTypes" type="radio" name="nav-links" ></input>Strict Mode 
@@ -660,7 +673,7 @@
                         </a>
                 </li> 
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Uncontrolled_Components">
                             <input id="Uncontrolled_Components" type="radio" name="nav-links" ></input>Uncontrolled Components 
@@ -669,7 +682,7 @@
                         </a>
                 </li> 
 
-                <li class="ol"> 
+                <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Web_Components">
                             <input id="Web_Components" type="radio" name="nav-links" ></input>Web Components 
@@ -685,13 +698,16 @@
             <div>   
 
                 <div class="menu"> 
-                  <label for="link-dropdonwn-4"><label for="link-dropdonwn-8"> <label for="API_REFERENCE"> <input class="header-radio"  id="API_REFERENCE" type="radio" name="nav-headers">API REFERENCE</label>
+                     <label for="link-dropdonwn-4">
+                      <label class="nav-header-label" for="API_REFERENCE"> <input class="header-radio"  id="API_REFERENCE" type="radio" name="nav-headers">API REFERENCE
+                      </label>
+                      </label>
                     <select  class="dropdown" id="link-dropdonwn-4"></select> 
                 </div>  
 
                  <ul class="dropdowns" id="link-dropdonwn-1">  
 
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="React">
                             <input id="React" type="radio" name="nav-links" ></input>React 
@@ -700,7 +716,7 @@
                         </a>
                 </li> 
 
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="React.Component">
                             <input id="React.Component" type="radio" name="nav-links" ></input>React.Component  
@@ -709,7 +725,7 @@
                         </a>
                 </li> 
 
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="ReactDOM">
                             <input id="ReactDOM" type="radio" name="nav-links" ></input>ReactDOM  
@@ -718,7 +734,7 @@
                         </a>
                 </li> 
 
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="ReactDOMServer">
                             <input id="ReactDOMServer" type="radio" name="nav-links" ></input>ReactDOMServer  
@@ -727,7 +743,7 @@
                         </a>
                 </li> 
 
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="DOM_Elements">
                             <input id="DOM_Elements" type="radio" name="nav-links" ></input>DOM Elements 
@@ -736,7 +752,7 @@
                         </a>
                 </li> 
 
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="SyntheticEvent">
                             <input id="SyntheticEvent" type="radio" name="nav-links" ></input>SyntheticEvent
@@ -745,7 +761,7 @@
                         </a>
                 </li> 
 
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Test_Utilities">
                             <input id="Test_Utilities" type="radio" name="nav-links" ></input>Test Utilities
@@ -754,7 +770,7 @@
                         </a>
                 </li> 
 
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Test_Renderer">
                             <input id="Test_Renderer" type="radio" name="nav-links" ></input>Test Renderer
@@ -763,7 +779,7 @@
                         </a>
                 </li> 
 
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="JS_Environment_Requirements">
                             <input id="Test_Renderer" type="radio" name="nav-links" ></input>JS Environment Requirements
@@ -772,7 +788,7 @@
                         </a>
                 </li> 
 
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Glossary">
                             <input id="Glossary" type="radio" name="nav-links" ></input>Glossary
@@ -788,14 +804,17 @@
             <div>  
 
                 <div class="menu"> 
-                  <label for="link-dropdonwn-5"><label for="link-dropdonwn-8"> <label for="HOOKS"> <input class="header-radio"  id="HOOKS" type="radio" name="nav-headers">HOOKS</label></label>
+                  <label for="link-dropdonwn-5">
+                      <label class="nav-header-label" for="HOOKS"> <input class="header-radio"  id="HOOKS" type="radio" name="nav-headers">HOOKS
+                      </label>
+                   </label>
                     <select  class="dropdown" id="link-dropdonwn-5"></select>
                 </div>  
 
 
                  <ul class="dropdowns" id="link-dropdonwn-1">  
                 
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Introducing_Hooks">
                             <input id="Introducing_Hooks" type="radio" name="nav-links" ></input>1. Introducing Hooks
@@ -804,7 +823,7 @@
                         </a>
                 </li>  
                 
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Hooks_at_a_glance">
                             <input id="Hooks_at_a_glance" type="radio" name="nav-links" ></input>2. Hooks at a glance 
@@ -813,7 +832,7 @@
                         </a>
                 </li>  
                 
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Using_the_State_Hook">
                             <input id="Using_the_State_Hook" type="radio" name="nav-links" ></input>3. Using the state Hook 
@@ -822,7 +841,7 @@
                         </a>
                 </li>  
                 
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Using_the_effect_Hook">
                             <input id="Using_the_effect_Hook" type="radio" name="nav-links" ></input>4. Using the Effect Hook 
@@ -831,7 +850,7 @@
                         </a>
                 </li>  
                 
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Rules_of_Hooks">
                             <input id="Rules_ef_Hook" type="radio" name="nav-links" ></input>5. Rules of Hooks 
@@ -840,7 +859,7 @@
                         </a>
                 </li>  
                 
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Building_Your_Own_Hooks">
                             <input id="Building_Your_Own_Hooks" type="radio" name="nav-links" ></input>6. Building Your Own Hooks
@@ -849,7 +868,7 @@
                         </a>
                 </li>  
                 
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Hooks_API_Reference">
                             <input id="Hooks_API_Reference" type="radio" name="nav-links" ></input>7. Hooks API Reference
@@ -858,7 +877,7 @@
                         </a>
                 </li>  
                 
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Hooks_FAQ">
                             <input id="Hooks_FAQ" type="radio" name="nav-links" ></input>8. Hooks FAQ
@@ -874,14 +893,17 @@
             <div> 
 
                  <div class="menu"> 
-                   <label for="link-dropdonwn-6"><label for="link-dropdonwn-8"> <label class="header-label" for="TESTING"> <input class="header-radio"  id="TESTING" type="radio" name="nav-headers">TESTING</label></label>
+                   <label for="link-dropdonwn-6">
+                       <label class="nav-header-label" class="header-label" for="TESTING"> <input class="header-radio"  id="TESTING" type="radio" name="nav-headers">TESTING
+                       </label>
+                    </label>
                      <select  class="dropdown" id="link-dropdonwn-6"></select>
                  </div> 
 
                 <ul class="dropdowns" id="link-dropdonwn-1">   
 
                                     
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Testing_Overview">
                             <input id="Testing_Overview" type="radio" name="nav-links" ></input>Testing Overview
@@ -890,7 +912,7 @@
                         </a>
                 </li> 
                                     
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Testing_Recipes">
                             <input id="Testing_Recipes" type="radio" name="nav-links" ></input>Testing Recipes
@@ -899,7 +921,7 @@
                         </a>
                 </li> 
                                     
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Testing_Environment">
                             <input id="Testing_Environment" type="radio" name="nav-links" ></input>Testing Environment
@@ -915,15 +937,17 @@
              <div>  
 
                 <div class="menu"> 
-                   <label for="link-dropdonwn-7"><label for="link-dropdonwn-8">
-                       <label for="CONTRIBUTING"> <input class="header-radio"  id="CONTRIBUTING" type="radio" name="nav-headers">CONTRIBUTING</label></label>
+                   <label for="link-dropdonwn-7">
+                       <label class="nav-header-label" for="CONTRIBUTING"> <input class="header-radio"  id="CONTRIBUTING" type="radio" name="nav-headers">CONTRIBUTING
+                       </label>
+                   </label>
                      <select  class="dropdown" id="link-dropdonwn-7"></select>
                 </div> 
 
                  <ul class="dropdowns" id="link-dropdonwn-1">  
                      
                                                         
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="How_to_Contribute">
                             <input id="How_to_Contribute" type="radio" name="nav-links" ></input>How to Contribute 
@@ -932,7 +956,7 @@
                         </a>
                  </li> 
                                                         
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Codebase_Overview">
                             <input id="Codebase_Overview" type="radio" name="nav-links" ></input>Codebase Overview 
@@ -941,7 +965,7 @@
                         </a>
                  </li> 
                                                         
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Implementation_Notes">
                             <input id="Implementation_Notes" type="radio" name="nav-links" ></input>Implementation Notes
@@ -950,7 +974,7 @@
                         </a>
                  </li> 
                                                         
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Design_Principles">
                             <input id="Design_Principles" type="radio" name="nav-links" ></input>Design Principles
@@ -966,15 +990,18 @@
            <div>  
 
              <div class="menu"> 
-                <label for="link-dropdonwn-8"> <label for="FAQ"> <input class="header-radio"  id="FAQ" type="radio" name="nav-headers"></input>
-                    FAQ</label> </label>
+                <label for="link-dropdonwn-8"> 
+                    <label class="nav-header-label" for="FAQ"> 
+                        <input class="header-radio"  id="FAQ" type="radio" name="nav-headers"></input>FAQ
+                    </label> 
+                </label>
                  <select  class="dropdown" id="link-dropdonwn"></select>
              </div>  
 
               <ul class="dropdowns" id="link-dropdonwn-1">  
 
                                                                         
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="AJAX_and_APIs">
                             <input id="AJAX_and_APIs" type="radio" name="nav-links" ></input>AJAX and APIs
@@ -983,7 +1010,7 @@
                         </a>
                  </li> 
                                                                         
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="BABEL_JSX_and_Build_Steps">
                             <input id="BABEL_JSX_and_Build_Steps" type="radio" name="nav-links" ></input>Babel,JSX, and Build Steps
@@ -992,7 +1019,7 @@
                         </a>
                  </li> 
                                                                         
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Passing_Functions_to_Components">
                             <input id="Passing_Functions_to_Components" type="radio" name="nav-links" ></input>Passing Functions to Components
@@ -1001,7 +1028,7 @@
                         </a>
                  </li> 
                                                                         
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Component_State">
                             <input id="Component_State" type="radio" name="nav-links" ></input>Component State 
@@ -1010,7 +1037,7 @@
                         </a>
                  </li> 
                                                                         
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Styling_and_CSS">
                             <input id="Styling_and_CSS" type="radio" name="nav-links" ></input>Styling and CSS 
@@ -1019,7 +1046,7 @@
                         </a>
                  </li> 
                                                                         
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="File_Structure">
                             <input id="File_Structure" type="radio" name="nav-links" ></input>File Structure 
@@ -1028,7 +1055,7 @@
                         </a>
                  </li> 
                                                                         
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Versioning_Policy">
                             <input id="Versioning_Policy" type="radio" name="nav-links" ></input>Versioning Policy
@@ -1037,7 +1064,7 @@
                         </a>
                  </li> 
                                                                         
-                 <li class="ol"> 
+                 <li class="ul"> 
                         <a href="" class="nav-links">
                         <label  class="radio-label" for="Vertual_DOM_and_Internals">
                             <input id="Vertual_DOM_and_Internals" type="radio" name="nav-links" ></input>Virtual DOM and Internals
