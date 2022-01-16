@@ -215,16 +215,16 @@ hr
      line-height: 41px;
      font-weight:300; 
      color:#6d6d6d;
-     margin-top: 45px; 
+     margin-top:15px; 
      margin-bottom: 15px;  
-     padding:2em 2.5em 0 0 ; 
+     padding:1.5em 2.5em 0 0 ; 
  
 
  }   
 
  .params2
  { 
-     padding:2em 2.5em 0 0 ; 
+     padding:1em 2.5em 0 0 ; 
      width:95%; 
      font-size: 17px;
      font-weight: 400;
