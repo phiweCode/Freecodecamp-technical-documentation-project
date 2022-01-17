@@ -5,7 +5,12 @@ let checkMark = document.querySelectorAll(".checkmark");
 let lists = Array.from(document.querySelectorAll(".dropdowns"));
 
 let navLinks = document.querySelectorAll('[name="nav-links"]')
+ 
+let inputSearch = document.querySelector(".search-div");  
 
+let inputNav = document.querySelectorAll('[name="main_nav"]'); 
+
+let inputNavArr = Array.from(inputNav) ; 
 
 let stylesInput1 = {
 
@@ -19,16 +24,23 @@ let stylesInput2 = {
     "height":"0",
     "overflow":"hidden"
 }
-
-let stylesCheckmark = 
-{ 
-    "position" : "absolute",
-    "left":"-25px",
-    "width" : "4px",
-    "height": "24px",
-    "background-color" : "#31dafb"
-}   
  
+
+const defaultRadio = ()=> 
+{ 
+inputNavArr[0].checked = "true"; 
+} 
+
+const onfocusFunction = () =>  
+{ 
+       inputSearch.style.backgroundColor = "#99999952"
+} 
+
+const onblurFunction = () => 
+{ 
+       inputSearch.style.backgroundColor = "transparent";
+}
+
 
 const navReloader = (char) => 
 {  
@@ -44,7 +56,6 @@ const navReloader = (char) =>
  }); 
 
 }   
-
 
 
 navHeaders.map((each,ind,arr)=> 
@@ -67,7 +78,7 @@ navHeaders.map((each,ind,arr)=>
        }
     ) 
      
-               navReloader();
+    navReloader();
 
 
     $(function () {
@@ -103,5 +114,36 @@ navHeaders.map((each,ind,arr)=>
         $radio.siblings(".header-radio").data("waschecked", false);
         
       });
-    });
+    });  
+
+
+ $(function () {
+      $(".main_header_radio").click(function () {
+        var $radio = $(this);  
+        var $link = $(".nav_li").eq($(".main_header_radio").index($radio));
+            
+          $(".nav_li").css({
+              "border-bottom" : "none" ,
+               "color" : "#ffffff"
+          })
+
+        if($radio.prop("checked"))
+        { 
+            $link.css({
+              "border-bottom": "3px solid #61dafb ", 
+              "color": "#61dafb"
+            }); 
+
+        }  
+
+        
+           
+         
+        
+      }) 
+    } 
+      ); 
+       
+
+
 
