@@ -18,18 +18,9 @@ let stylesInput1 = {
     "height":"100%",
     "overflow":"auto"
 }
-let stylesInput2 = {
 
-    "width":"0",
-    "height":"0",
-    "overflow":"hidden"
-}
  
 
-const defaultRadio = ()=> 
-{ 
-inputNavArr[0].checked = "true"; 
-} 
 
 const onfocusFunction = () =>  
 { 
@@ -84,14 +75,10 @@ navHeaders.map((each,ind,arr)=>
     $(function () {
       $(".header-radio").click(function () {
         var $radio = $(this);
-       
-    
+      
         // if this was previously checked
 
         if ($radio.data("waschecked") == true) { 
-
-      
-          navReloader(); 
           $radio.prop("checked", false);
           $radio.data("waschecked", false);  
            /*
@@ -134,16 +121,15 @@ navHeaders.map((each,ind,arr)=>
               "color": "#61dafb"
             }); 
 
-        }  
-
-        
-           
-         
+        } 
         
       }) 
     } 
       ); 
        
 
-
+ $(document).ready(() => {
+   $("#Docs").prop("checked", true);
+   $("#INSTALLATION").prop("checked", true);
+ });
 

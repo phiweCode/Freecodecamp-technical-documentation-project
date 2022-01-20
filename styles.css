@@ -258,8 +258,11 @@ hr
      font-weight: 400;
      line-height: 29px;
      color:#000;
- }
+ } 
 
+ .params4{ 
+     margin-bottom: 1em;
+ }
  .keywords
  { 
      font-weight: 700; 
@@ -291,7 +294,9 @@ hr
 
  .tip-sections
  { 
-     margin-bottom: 40px;
+     margin-bottom: 20px;
+     margin-top:20px; 
+    
  }
 
  .tip-sections h3
@@ -305,8 +310,8 @@ hr
  {   display:flex;
      flex-direction: column;
      justify-content: center;
-     padding: 1em 1.5em; 
-     height:8em; 
+      padding: 1em 1.5em; 
+     min-height:8em; 
      font-size: 17px;
      line-height:29px;
      font-weight:400;
@@ -378,7 +383,73 @@ hr
 
     height:5em; 
     margin-bottom: 6em;
+} 
+
+.code 
+{ 
+    background-color: #282c34; 
+    margin: 1em 0;  
+    padding:1em 2em; 
+    border-radius: 15px;  
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight:400; 
+} 
+
+.html-comment
+{ 
+    color:#b2b2b2; 
+} 
+
+.html-syntax
+{
+    margin: 2em 0;
+}  
+
+
+
+.symbol
+{
+     color: #88c6be;
 }
+
+.tag-name 
+{ 
+    color:#fc929e;
+} 
+
+.attributes
+{
+    color:#c5a3c5;
+} 
+
+.string
+{ 
+    color:#8dc891; 
+} 
+
+.method 
+{ 
+    color:#79b6f2; 
+} 
+
+.values
+{ 
+    color: #ff8b50; 
+} 
+
+.preprocessor
+{ 
+    color:#c5a5c5;
+} 
+
+.variable
+ { 
+     color: #fff; 
+ }
+
+
 
  /* end */
 

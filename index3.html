@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="javascript.js" defer ></script>
+    <title>Add React to a Website</title>
+
+</head>
+
+<body> 
+
+    <!-- The showcase area contains both main technical document and its navbar-->
+
+   <div class="showcase-area">   
+
+       <!-- This is the main section of the Technical documentation -->
+
+         <main id="main-doc">     
+    
+                <div class="main-doc-container">      
+                    
+                   <section class="main-section" id="section_1">  
+
+                              <header><h1>Add React to a Website</h1></header> 
+                               
+                               <p class="param1">Use as little or as much React as you need.</p> 
+                               
+                                 <p class="params2"> 
+                                    React has been designed from the start for gradual adoption, and <span class="keywords"> you can use as little or as much React as you need</span>. Perhaps you only want to add some “sprinkles of interactivity” to an existing page. React components are a great way to do that.
+                                 </p> 
+
+                                 <p class="params2"> 
+                                    The majority of websites aren’t, and don’t need to be, single-page apps. With <span class="keywords"> a few lines of code and no build tooling</span>, try React in a small part of your website. You can then either gradually expand its presence, or keep it contained to a few dynamic widgets.
+                                 </p> 
+
+                                 <hr>  
+
+                                 <ul>
+                                     <li><span class="inline-links">Add React in One Minute</span></li> 
+                                     <li><span class="inline-links">Optional: Try React with JSX </span>(no bundler necessary!)</li> 
+                                </ul> 
+
+                                <hr>  
+
+                                <div class="sub-sections">
+                                   <h5 class="large-header" >Add React in One Minute</h5>
+                                      <p class="params2"> 
+                                        In this section, we will show how to add a React component to an existing HTML page. You can follow along with your own website, or create an empty HTML file to practice.
+                                       </p> 
+
+                                       <p class="params2">
+                                        There will be no complicated tools or install requirements — <span class="inline-links">to complete this section, you only need an internet connection, and a minute of your time.</span></p>
+                                        
+                                        <p class="params2">
+                                           Optional: <span class="inline-links">Download the full example (2KB zipped)</span>
+                                        </p>
+                                
+                              </div> 
+
+                              <div class="sub-sections">
+                                   <h3>Step 1: Add a DOM Container to the HTML</h3>
+                                      <p class="params2"> 
+                                         First, open the HTML page you want to edit. Add an empty <div> tag to mark the spot where you want to display something with React. For example:
+                                       </p>
+                             
+
+                              <div class="code"> 
+                                 <!-- CODE SECTION --> 
+                                  
+                                   <span class="html-comment"> 
+                                       &lt!-- ... existing HTML ... --&gt
+                                   </span> 
+                                <br>
+                                <br>
+                                   <span class="html-syntax"> 
+                                       <span class="symbol">&lt</span><span class="tag-name">div</span><span class="symbol"><span class="attributes"> id</span><span class="symbol">=</span><span class="string">"like_button_container"</span><span class="symbol">&gt</span>&lt/div&gt
+                                   </span>
+                                <br>
+                                <br>
+                                   <span class="html-comment"> 
+                                       &lt!-- ... existing HTML ... --&gt
+                                   </span>
+
+                              </div>  
+
+                              <p class="params2"> 
+                                   We gave this &ltdiv&gt a unique id HTML attribute. This will allow us to find it from the JavaScript code later and display a React component inside of it.
+                              </p>
+
+                              </div>  
+
+                              <div class="tip-sections">
+                                    <h3>Tip</h3>
+                                     <p class="params4">
+                                        You can place a “container” &ltdiv&gt like this <span class="keywords">anywhere</span> inside the <body> tag. You may have as many independent DOM containers on one page as you need. They are usually empty — React will replace any existing content inside DOM containers.
+                                    </p>
+                              </div> 
+
+                              <div class="sub-sections">
+                                   <h3>Step 2: Add the Script Tags</h3>
+                                      
+                                      <p class="params2"> 
+                                        Next, add three  &ltscript&gt tags to the HTML page right before the closing &lt/body&gt tag:
+                                       </p> 
+
+                                       <div class="code"> 
+                                        <!-- CODE SECTION --> 
+                                           <span class="html-comment"> 
+                                            &lt!-- ... existing HTML ... --&gt
+                                           </span> 
+                                            <br>
+                                            <br> 
+                                            <span class="html-comment"> 
+                                            &lt!-- ... Load React. ... --&gt
+                                           </span> 
+                                           <br>
+                                            <span class="html-comment"> 
+                                            &lt!-- Note: when deploying, replace "development.js" with "production.min.js". --&gt
+                                           </span>  
+                                            <br>
+                                            <span class="html-syntax"> 
+                                            <spin class="symbol">&lt</spin><span class="tag-name">script</span> <span class="attributes">src</span><span class="symbol">=</span><span class="string">"https://unpkg.com/react@17/umd/react.development.js"</span> <span class="attributes">crossorigin</span><span class="symbol">&gt&lt/</span><span class="tag-name">script</span><span class="symbol">&gt</span>
+                                            </span> 
+                                            <br>
+                                            <span class="html-syntax"> 
+                                            <spin class="symbol">&lt</spin><span class="tag-name">script</span> <span class="attributes">src</span><span class="symbol">=</span><span class="string">"https://unpkg.com/react-dom@17/umd/react-dom.development.js"</span> <span class="attributes">crossorigin</span><span class="symbol">&gt&lt/</span><span class="tag-name">script</span><span class="symbol">&gt</span>
+                                            </span>
+                                            <br>
+                                            <br> 
+                                            <span class="html-comment"> 
+                                            &lt!-- ... Load our React component. ... --&gt
+                                           </span> 
+                                           <br>
+                                           <spin class="symbol">&lt</spin><span class="tag-name">script</span> <span class="attributes">src</span><span class="symbol">=</span><span class="string">"like_button.js"</span> <span class="attributes">crossorigin</span><span class="symbol">&gt&lt/</span><span class="tag-name">script</span><span class="symbol">&gt</span>
+                                           <br>
+                                           <br>
+                                           <span class="symbol">&lt/</span><span class="tag-name">body</span><span class="symbol">&gt</span> 
+
+                                        </div>   
+
+                                        <p class="params2">
+                                            The first two tags load React. The third one will load your component code.
+                                        </p>
+
+                              </div>  
+
+                              <div class="sub-sections">
+                                   <h3> Step 3: Create a React Component</h3>
+                                      
+                                      <p class="params2"> 
+                                       Create a file called like_button.js next to your HTML page.
+                                      </p>   
+
+                                      <p class="params2">
+                                         Open <span class="inline-links">this starter code</span> and paste it into the file you created.
+                                      </p>
+                              </div> 
+
+                               <div class="tip-sections">
+                                    <h3>Tip</h3>
+                                     <p class="params4">
+                                    This code defines a React component called LikeButton. Don’t worry if you don’t understand it yet — we’ll cover the building blocks of React later in our <span class="inline-links">hands-on tutorial</span> and <span class="inline-links">main concepts guide</span>. For now, let’s just get it showing on the screen! 
+                                    </p>
+                              </div>  
+                              
+                              <div class="sub-sections">
+                               
+                                 <p class="params2">
+                                    After <span class="inline-links keywords">the starter code</span>, add two lines to the bottom of like_button.js:
+                                 </p>  
+
+                                 <div class="code"> 
+                                        <!-- CODE SECTION -->  
+
+                                         <span class="html-comment"> 
+                                           // ... the starter code you pasted ...
+                                         </span>
+                                         <br>
+                                         <br> 
+
+                                         <span class="preprocessor">const </span><span class="variable">domContainer = document</span><span class="method">.querySelector</span><span class="symbol">(</span><span class="string">'#like_button_container'</span><span class="symbol">);</span>
+                                          
+                                         <br>
+                                            
+                                         <span class="variable">ReactDOM</span><span class="method">.render</span><span class="symbol">(</span><span class="method">e</span><span class="symbol">(</span><span class="variable">LikeButton</span><span class="symbol">),</span><span class="variable">domContainer</span><span class="symbol">);</span>
+
+                                 </div>  
+
+                                 <p class="params2">
+                                   These two lines of code find the <div> we added to our HTML in the first step, and then display our “Like” button React component inside of it.
+                                 </p>  
+ 
+                                 </div> 
+
+                                  <div class="sub-sections">
+                                   <h3>That's it!</h3>
+                                      
+                                    <p class="params2"> 
+                                       There is no step four. <span class="keywords">You have just added the first React component to your website</span>.
+                                    </p>  
+
+                                    <p class="params2"> 
+                                       Check out the next sections for more tips on integrating React.
+                                    </p> 
+
+                                    <p class="params2">
+                                       <span class="inline-links bolder">
+                                          View the full example source code
+                                       </span>
+                                       <span class="inline-links bolder">
+                                          Download the full example (2KB zipped)
+                                       </span>
+                                    </p>
+               
+                                 </div> 
+
+                                 
+                                  <div class="sub-sections">
+                                   <h3>Tip: Reuse a Component</h3>
+                                      
+                                    <p class="params2">   
+                                        Commonly, you might want to display React components in multiple places on the HTML page. Here is an example that displays the “Like” button three times and passes some data to it:
+                                    </p>  
+                                    <p class="params2">   
+                                      <span class="inline-links">View the full example source code</span>
+                                    </p>  
+                                    <p class="params2">   
+                                     Download the full example (2KB zipped)
+                                    </p>  
+                                 </div> 
+
+                                 
+                                 <div class="tip-sections">
+                                    <h3>Tip</h3>
+                                     <p class="params4">
+                                      This strategy is mostly useful while React-powered parts of the page are isolated from each other. Inside React code, it’s easier to use <span class="inline-links">component composition</span> instead.
+                                     </p>
+                                 </div>   
+
+                                 <div class="sub-sections">
+
+                                   <h3>Tip: Minify JavaScript for Production</h3>
+                                      
+                                    <p class="params2">   
+                                        Before deploying your website to production, be mindful that unminified JavaScript can significantly slow down the page for your users.
+                                    </p>  
+                                    <p class="params2">   
+                                     If you already minify the application scripts, <span class="inline-links">your site will be production-ready </span> if you ensure that the deployed HTML loads the versions of React ending in production.min.js:
+                                    </p>  
+                                   
+                                    <div class="code">
+                                       <!-- This is the code section--> 
+                                         <span class="html-syntax"> 
+                                            <spin class="symbol">&lt</spin><span class="tag-name">script</span> <span class="attributes">src</span><span class="symbol">=</span><span class="string">"https://unpkg.com/react@17/umd/react.production.min.js"</span> <span class="attributes">crossorigin</span><span class="symbol">&gt&lt/</span><span class="tag-name">script</span><span class="symbol">&gt</span>
+                                            </span> 
+                                            <br>
+                                            <span class="html-syntax"> 
+                                            <spin class="symbol">&lt</spin><span class="tag-name">script</span> <span class="attributes">src</span><span class="symbol">=</span><span class="string">"https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"</span> <span class="attributes">crossorigin</span><span class="symbol">&gt&lt/</span><span class="tag-name">script</span><span class="symbol">&gt</span>
+                                            </span>
+                                    </div> 
+
+                                    <p class="params2">   
+                                       If you don’t have a minification step for your scripts, here’s one way to set it up.
+                                    </p>  
+
+                                 </div>  
+
+                                  <div class="sub-sections">
+
+                                   <h5 class="large-header" >Optional: Try React with JSX</h5>
+                                        
+                                    <p class="params2">  
+                                       In the examples above, we only relied on features that are natively supported by browsers. This is why we used a JavaScript function call to tell React what to display:
+                                    </p>   
+
+                                      <div class="code">
+                                       <!-- This is the code section--> 
+                                       <span class="preprocessor">const</span><span class="variable"> e = React.createElement</span><span class="symbol">;</span>
+                                        <br>
+                                        <br> 
+                                         <span class="html-comment">  // Display a "Like" &ltbutton&gt </span> 
+                                        <br>
+                                         <span class="javascript-syntax"> 
+                                            <span class="preprocessor">return </span><span class="method">e</span><span class="symbol">(</span>
+                                            <br>
+                                            <span class="string">'button',</span>
+                                            <br>
+                                            <span class="symbol">{ </span><span class="method">onClick</span><span class="variable">:</span><span class="symbol">()</span><span class="variable">=></span><span class="preprocessor">this</span><span class="method">.setState</span><span class="symbol">({</span><span class="variable">liked:</span><span class="values">true</span><span class="symbol">}) },</span>
+                                             <br> 
+                                             <span class="string">'Like'</span>
+                                             <br>
+                                             <span class="symbol">);</span>
+                                        </span>
+                                            
+                                    </div>  
+
+                                    <p class="params2">  
+                                     However, React also offers an option to use JSX instead:
+                                    </p> 
+
+                                    <div class="code">
+                                       <!-- This is the code section--> 
+                                       
+                                          <span class="html-comment">  // Display a "Like" &ltbutton&gt </span> 
+                                        <br>
+                                         <span class="javascript-syntax"> 
+                                            <span class="preprocessor">return </span><span class="symbol">(</span>
+                                            <br>
+                                            <span class="string">'button',</span>
+                                            <br>
+                                            <span class="symbol">   &lt</span><span class="tag-name">button </span><span class="attributes">onClick</span></span><span class="symbol">={()</span><span class="variable">=></span><span class="preprocessor">this</span><span class="method">.setState</span><span class="symbol">({</span><span class="values">liked</span><span class="variable">:</span><span class="values">true</span><span class="symbol">})}></span>
+                                             <br> 
+                                             <span class="variable">    Like</span>
+                                             <br>
+                                             <span class="symbol">   &lt/</span><span class="tag-name">button</span><span class="symbol">&gt</span>
+                                             <br>
+                                             <span class="symbol">);</span>
+                                        </span>
+
+                                    </div>   
+
+                                    <p class="params2">  
+                                      These two code snippets are equivalent. While <span class="inline-links">JSX is <span class="inline-links">completely optional</span></span>, many people find it helpful for writing UI code — both with React and with other libraries.
+                                    </p>  
+
+                                    <p class="params2">  
+                                      You can play with JSX using <span class="inline-links">this online converter</span>.
+                                    </p>  
+
+                                   </div> 
+
+                                   <div class="sub-sections">
+                                       <h3>Quickly Try JSX</h3>
+                                      
+                                           <p class="params2">  
+                                             The quickest way to try JSX in your project is to add this &ltscript&gt tag to your page:
+                                           </p> 
+
+                                           <div class="code">
+                                           <!-- This is the code section --> 
+                                           <span class="html-syntax"> 
+                                            <spin class="symbol">&lt</spin><span class="tag-name">script</span> <span class="attributes">src</span><span class="symbol">=</span><span class="string">"https://unpkg.com/babel-standalone@6/babel.min.js"</span> <span class="attributes">crossorigin</span><span class="symbol">&gt&lt/</span><span class="tag-name">script</span><span class="symbol">&gt</span>
+                                            </span>
+                                           </div> 
+
+                                           <p class="params2">  
+                                             Now you can use JSX in any <span class="highlight">&ltscript&gt</span> tag by adding <span class="hightlight">type="text/babel"</span> attribute to it. Here is <span class="inline-links">an example HTML file with JSX</span> that you can download and play with.
+                                           </p>  
+
+                                           <p class="params2">  
+                                             This approach is fine for learning and creating simple demos. However, it makes your website slow and <span class="keywords">isn’t suitable for production</span>. When you’re ready to move forward, remove this new <span class="hightlight">&ltscript&gt</span> tag and the <span class="highlight">type="text/babel"</span> attributes you’ve added. Instead, in the next section you will set up a JSX preprocessor to convert all your <span class="highlight">&ltscript&gt</span> tags automatically.
+                                           </p> 
+
+                                    </div> 
+
+                                    <div class="sub-sections">
+
+                                          <h3>Tip: Minify JavaScript for Production</h3>
+                                      
+                                           <p class="params2">                   
+                                            Adding JSX to a project doesn’t require complicated tools like a bundler or a development server. Essentially, adding JSX <span class="keywords">is a lot like adding a CSS preprocessor</span>. The only requirement is to have <span class="keywords">Node.js</span> installed on your computer.
+                                           </p> 
+
+                                           <p class="params2">    
+                                              Go to your project folder in the terminal, and paste these two commands:
+                                           </p>  
+
+                                           <p class="params2">
+                                             1. <span class="keywords">Step 1</span>: Run <span class="highlight">npm init -y</span> (if it fails, <span class="inline-links">here’s a fix</span>)
+                                           </p>  
+
+                                           <p class="params2">
+                                             2. <span class="keywords">Step 2</span>: Run <span class="highlight">npm install babel-cli@6 babel-preset-react-app@3</span>
+                                           </p> 
+
+                                    </div>  
+
+                                    <div class="tip-sections">
+                                       <h3>Tip</h3>
+                                       <p class="params4">
+                                       We’re <span class="inline-links">using npm here only to install the JSX preprocessor</span>; you won’t need it for anything else. Both React and the application code can stay as <span class="highlight">&ltscript&gt</span> tags with no changes.
+                                       </p>
+                                    </div>  
+
+                                          <p class="params2"> 
+                                               Congratulations! You just added a <span class="keywords">production-ready JSX setup</span> to your project.
+                                          </p>
+
+                                    <div class="sub-sections"> 
+
+                                         
+                                          <h3>Run JSX Preprocessor</h3>
+                                           
+                                          <p class="params2"> 
+                                              Create a folder called src and run this terminal command:
+                                          </p> 
+
+                                          <div class="code"> 
+                                             <!-- This is the code sections--> 
+                                             <span class="variable">npx babel --watch src --out-dir . --presets react-app/pr</span>
+                                          </div>
+
+                                    </div> 
+
+                                    <div class="tip-sections">
+
+                                          <h3>Note</h3>
+
+                                          <p class="params4">
+                                          npx is not a typo — it’s a <span class="inline-links">package runner tool that comes with npm 5.2+</span>.
+                                          </p>  
+
+                                          <p class="params4">
+                                          If you see an error message saying “You have mistakenly installed the <span class="highlight">babel</span> package”, you might have missed <span class="inline-links">the previous step</span>. Perform it in the same folder, and then try again.
+                                          </p> 
+
+                                    </div> 
+
+                                    <div class="sub-sections">  
+
+                                        <p class="params2">
+                                         Don’t wait for it to finish — this command starts an automated watcher for JSX.
+                                        </p> 
+
+                                        <p class="params2">
+                                        If you now create a file called <span class="highlight">src/like_button.js</span> with this <span class="inline-links"><span class="inline-links">JSX starter code</span></span>, the watcher will create a preprocessed <span class="highlight">like_button.js</span> with the plain JavaScript code suitable for the browser. When you edit the source file with JSX, the transform will re-run automatically.
+                                        </p> 
+
+                                        <p class="params2">
+                                         As a bonus, this also lets you use modern JavaScript syntax features like classes without worrying about breaking older browsers. The tool we just used is called Babel, and you can learn more about it from its <span class="inline-links">documentation</span>.
+                                        </p> 
+
+                                        <p class="params2">
+                                         Don’t wait for it to finish — this command starts an automated watcher for JSX.
+                                        </p> 
+                                    
+                                    
+                                    </div> 
+
+
+                                    <div class="sub-sections"> 
+                                          <div class="feedback-wrapper" > <span class="feedback">Is this page useful?</span> <i class="fa fa-2x fa-thumbs-up"></i> <i class="fa fa-2x fa-thumbs-down"></i> <span class="feedback-link">Edit this page</span></div>
+                                     </div>
+
+                   </section> 
+
+                </div>
+
+         </main>
+
+
+   </div> 
+   <!-- This is the end of the showcase section--> 
+
+   
+<!-- -->  
+
+<!-- This is the footer section-->  
+
+<footer id="main-footer">
+  
+    <div class="footer-container"> 
+    <nav id="page-nav"> 
+        <div class="article-nav-text"> 
+        <div class="next-article">
+            Next article
+        </div>
+        <div class="a1 Add-react-to-a-webpage">
+            <a class="Add-react" href="">Add React to a Website</a>
+        </div>
+        </div>
+    </nav>
+<div class="sub-footer-wrapper"> 
+    <nav class="sub-footer">
+        <div class="sub-footer-container">
+
+            <div class="copyright">
+
+                <div class="footer-logo">
+                    <img src="./download-footer.png" alt="">
+                </div>
+                <p>Copyright &copy 2022 Meta Platforms, Inc.</p>
+           
+            </div>  
+
+            <div class="footer-links-grid">
+                <div>
+                    <h4>DOCS</h4>
+                        <ul>
+                            <li>Installation</li>
+                            <li>Main Concepts</li>
+                            <li>Advanced Guides</li>
+                            <li>API Reference</li>
+                            <li>Hooks</li>
+                            <li>Testing</li>
+                            <li>Contributing</li>
+                            <li>FAQ</li>
+                        </ul>
+                    
+                </div>
+                <div>
+                    <h4>CHANNELS</h4>
+                        <ul>
+                            <li>GitHub</li>
+                            <li>Stack Overflow</li>
+                            <li>Discussion forums</li>
+                            <li>Reactiflux Chat</li>
+                            <li>DEV Community</li>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                        </ul>
+                  
+                </div>
+                <div>
+                    <h4>COMMUNITY</h4>
+                        <ul>
+                            <li>Code of Conduct</li>
+                            <li>Community Resources</li>
+                        </ul>
+                    
+                </div>
+                <div>
+                    <h4>MORE</h4>
+                        <ul>
+                            <li>Tutorial</li>
+                            <li>Blog</li>
+                            <li>Acknoledgement</li>
+                            <li>React Native</li>
+                            <li>Privacy</li>
+                            <li>Terrms</li>
+                        </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>  
+    </div>
+
+    </div>
+
+
+
+</footer>
+
+<!-- This is the end of the footer sectiion --> 
+
+<!-- -->
+
+    
+</body>
+</html>
