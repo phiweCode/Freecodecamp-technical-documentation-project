@@ -447,6 +447,11 @@ hr
 .variable
  { 
      color: #fff; 
+ } 
+
+ .command
+ { 
+     color:#fac863;
  }
 
 

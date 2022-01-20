@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="javascript.js" defer ></script>
+    <title>Create a New React App - React</title>
+
+</head>
+
+<body> 
+
+    <!-- The showcase area contains both main technical document and its navbar-->
+
+   <div class="showcase-area">   
+
+       <!-- This is the main section of the Technical documentation -->
+
+         <main id="main-doc">     
+    
+                <div class="main-doc-container">      
+                    
+                   <section class="main-section" id="section_1">  
+
+                              <header><h1>Create a New React App</h1></header> 
+                               
+                               <p class="param1">Use an integrated toolchain for the best user and developer experience.</p> 
+
+                               <p class="params2">
+                                   This page describes a few popular React toolchains which help with tasks like:
+                               </p> 
+
+                               <ul>
+                                   <li>Scaling to many files and components.</li>
+                                   <li>Using third-party libraries from npm.</li>
+                                   <li>Detecting common mistakes early.</li>
+                                   <li>Live-editing CSS and JS in development.</li>
+                                   <li>Optimizing the output for production.</li>
+                               </ul> 
+
+                               <p class="params2">
+                                   The toolchains recommended on this page <span class="keywords">don’t require configuration to get started</span>.
+                               </p> 
+
+                               <hr> 
+
+                               <div class="sub-sections">
+                                    <h5 class="large-header" >You Might Not Need a Toolchain</h5>
+                                      <p class="params2">  
+                                          If you don’t experience the problems described above or don’t feel comfortable using JavaScript tools yet, consider <span class="inline-links">adding React as a plain &ltscript&gt tag on an HTML page</span>, optionally <span class="inline-links">with JSX</span>.
+                                      </p> 
+                                      <br>
+                                      <p class="params2">
+                                          This is also <span class="keywords">the easiest way to integrate React into an existing website.</span> You can always add a larger toolchain if you find it helpful!
+                                      </p>
+                                </div> 
+                                <br>
+                                <hr>  
+
+                                <div class="sub-sections">
+                                    <h5 class="large-header" >Recommended Toolchains</h5>
+                                      <p class="params2">  
+                                          The React team primarily recommends these solutions:
+                                       </p> 
+                                    <ul>
+                                        <li>If you’re <span class="keywords">learning React</span> or <span class="keywords">creating a new single-page app,</span> use <span class="inline-links">Create React App</span>.</li>
+                                        <li>If you’re building a <span class="keywords">server-rendered website with Node.js,</span> try <span class="inline-links">Next.js</span>.</li>
+                                        <li>If you’re building a <span class="keywords">static content-oriented website,</span> try Gatsby.</li>
+                                        <li>If you’re building a <span class="keywords">component library</span> or <span class="keywords">integrating with an existing codebase</span>, try <span class="inline-links">More Flexible Toolchains</span>.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="sub-sections">
+                                   <h3>Create React App</h3>
+
+                                      <p class="params2">  
+                                        Create React App is a comfortable environment for <span class="keywords">learning React</span>, and is the best way to start building <span class="keywords">a new <span class="inline-links">single-page</span> application</span> in React.
+                                       </p> 
+
+                                      <p class="params2">  
+                                      It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have <span class="inline-links">Node >= 14.0.0 and npm >= 5.6</span> on your machine. To create a project, run:
+                                       </p> 
+                                
+                                </div> 
+
+                                <div class="code">
+                                    <span class="variable">npx create-react-app my-app</span>
+                                     <br>
+                                    <span class="command">cd </span><span class="variable">my-app</span>
+                                    <br>
+                                    <span class="method">npm </span><span class="variable">start</span>
+                                </div> 
+
+                                <div class="tip-sections">
+                                    <h3>Tip</h3>
+                                     <p class="params4">
+                                       npx on the first line is not a typo — it’s a <span class="inline-links">package runner tool that comes with npm 5.2+</span>.
+                                    </p>
+                              </div>  
+
+                              <div class="sub-sections">
+
+                                      <p class="params2">  
+                                       Create React App doesn’t handle backend logic or databases; it just creates a frontend build pipeline, so you can use it with any backend you want. Under the hood, it uses <span class="inline-links">Babel</span> and <span class="inline-links">webpack</span>, but you don’t need to know anything about them.
+                                       </p> 
+
+                                      <p class="params2">  
+                                      When you’re ready to deploy to production, running <span class="highlight">npm run build</span> will create an optimized <span class="hightlight">build</span> of your app in the build folder. You can learn more about Create React App <span class="inline-links">from its README</span> and the <span class="inline-links">User Guide</span>.
+                                      </p> 
+                                
+                             </div>
+
+                              <div class="sub-sections">
+
+                                      <p class="params2">  
+                                       Create React App doesn’t handle backend logic or databases; it just creates a frontend build pipeline, so you can use it with any backend you want. Under the hood, it uses <span class="inline-links">Babel</span> and <span class="inline-links">webpack</span>, but you don’t need to know anything about them.
+                                       </p> 
+
+                                      <p class="params2">  
+                                      When you’re ready to deploy to production, running <span class="highlight">npm run build</span> will create an optimized <span class="hightlight">build</span> of your app in the build folder. You can learn more about Create React App <span class="inline-links">from its README</span> and the <span class="inline-links">User Guide</span>.
+                                      </p> 
+                                
+                                    </div>
+
+                              <div class="sub-sections"> 
+
+                                <h3>Next.js</h3>
+
+                                      <p class="params2">  
+                                     <span class="inline-links">Next.js</span> is a popular and lightweight framework for <span class="keywords">static and server‑rendered applications</span> built with React. It includes <span class="keywords">styling and routing solutions</span> out of the box, and assumes that you’re using <span class="inline-links">Node.js</span> as the server environment.
+                                       </p> 
+
+                                      <p class="params2">  
+                                     Learn Next.js from <span class="inline-links">its official guide</span>.
+                                      </p> 
+                                
+                              </div>
+
+                              <div class="sub-sections"> 
+
+                                <h3>Gatsby</h3>
+
+                                      <p class="params2">  
+                                       <span class="inline-links">Gatsby</span> is the best way to create <span class="keywords">static websites</span> with React. It lets you use React components, but outputs pre-rendered HTML and CSS to guarantee the fastest load time.
+                                       </p> 
+
+                                      <p class="params2">  
+                                        Learn Gatsby from <span class="inline-links">its official guide</span> and a <span class="inline-links">gallery of starter kits</span>.
+                                      </p> 
+                                
+                              </div>
+
+                              <div class="sub-sections"> 
+
+                                <h3>More Flexible Toolchains</h3>
+
+                                      <p class="params2">  
+                                      The following toolchains offer more flexibility and choice. We recommend them to more experienced users:
+                                       </p> 
+
+                                    <ul>
+                                        <li> <span class="inline-links"><span class="keywords">Neutrino</span></span> combines the power of <span class="inline-links">webpack</span> with the simplicity of presets, and includes a preset for React apps and <span class="inline-links">React components</span>.</li>
+                                        <li><span class="inline-links"><span class="keywords">Nx</span></span> is a toolkit for full-stack monorepo development, with built-in support for React, Next.js, <span class="inline-links">Express</span>, and more.</li>
+                                        <li><span class="inline-links"><span class="keywords">Parcel</span></span> is a fast, zero configuration web application bundler that <span class="inline-links">works with React</span>.</li>
+                                        <li><span class="inline-links"><span class="keywords">Razzle</span></span> is a server-rendering framework that doesn’t require any configuration, but offers more flexibility than Next.js.</li>
+                                    </ul> 
+                                    
+
+                                     <p class="params2">  
+                                     If you prefer to set up your own JavaScript toolchain from scratch, check out this guide that re-creates some of the Create React App functionality.
+                                       </p>  
+
+                                     <p class="params2">  
+                                     Don’t forget to ensure your custom toolchain is correctly set up for production.
+                                       </p> 
+                                
+                              </div>  
+
+                              <hr>
+                               
+                              <div class="sub-sections"> 
+
+                                 <h5 class="large-header" >Creating a Toolchain from Scratch</h5>
+
+                                      <p class="params2">  
+                                        A JavaScript build toolchain typically consists of:
+                                       </p> 
+
+                                    <ul>
+                                       <li>A <span class="keywords">package manager</span>, such as <span class="inline-links">Yarn</span> or <span class="inline-links">npm</span>. It lets you take advantage of a vast ecosystem of third-party packages, and easily install or update them.</li>
+                                       <li>A <span class="keywords">bundler</span>, such as <span class="inline-links">webpack</span> or <span class="inline-links">Parcel</span>. It lets you write modular code and bundle it together into small packages to optimize load time.</li>
+                                       <li>A <span class="keywords">compiler</span> such as <span class="inline-links">Babel</span>. It lets you write modern JavaScript code that still works in older browsers.</li>
+                                    </ul> 
+                                    
+
+                                     <p class="params2">  
+                                     If you prefer to set up your own JavaScript toolchain from scratch, <span class="inline-links">check out this guide</span> that re-creates some of the Create React App functionality.
+                                       </p>  
+
+                                     <p class="params2">  
+                                    Don’t forget to ensure your custom toolchain <span class="inline-links">is correctly set up for production</span>.
+                                       </p> 
+                                
+                              </div>   
+
+                              <div class="sub-sections"> 
+                                          <div class="feedback-wrapper" > <span class="feedback">Is this page useful?</span> <i class="fa fa-2x fa-thumbs-up"></i> <i class="fa fa-2x fa-thumbs-down"></i> <span class="feedback-link">Edit this page</span></div>
+                              </div>
+
+                    </section>
+                </div>
+         </main> 
+
+           
+<!-- -->  
+
+<!-- This is the footer section-->  
+
+<footer id="main-footer">
+  
+    <div class="footer-container"> 
+    <nav id="page-nav"> 
+        <div class="article-nav-text"> 
+        <div class="next-article">
+            Next article
+        </div>
+        <div class="a1 Add-react-to-a-webpage">
+            <a class="Add-react" href="">Add React to a Website</a>
+        </div>
+        </div>
+    </nav>
+<div class="sub-footer-wrapper"> 
+    <nav class="sub-footer">
+        <div class="sub-footer-container">
+
+            <div class="copyright">
+
+                <div class="footer-logo">
+                    <img src="./download-footer.png" alt="">
+                </div>
+                <p>Copyright &copy 2022 Meta Platforms, Inc.</p>
+           
+            </div>  
+
+            <div class="footer-links-grid">
+                <div>
+                    <h4>DOCS</h4>
+                        <ul>
+                            <li>Installation</li>
+                            <li>Main Concepts</li>
+                            <li>Advanced Guides</li>
+                            <li>API Reference</li>
+                            <li>Hooks</li>
+                            <li>Testing</li>
+                            <li>Contributing</li>
+                            <li>FAQ</li>
+                        </ul>
+                    
+                </div>
+                <div>
+                    <h4>CHANNELS</h4>
+                        <ul>
+                            <li>GitHub</li>
+                            <li>Stack Overflow</li>
+                            <li>Discussion forums</li>
+                            <li>Reactiflux Chat</li>
+                            <li>DEV Community</li>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                        </ul>
+                  
+                </div>
+                <div>
+                    <h4>COMMUNITY</h4>
+                        <ul>
+                            <li>Code of Conduct</li>
+                            <li>Community Resources</li>
+                        </ul>
+                    
+                </div>
+                <div>
+                    <h4>MORE</h4>
+                        <ul>
+                            <li>Tutorial</li>
+                            <li>Blog</li>
+                            <li>Acknoledgement</li>
+                            <li>React Native</li>
+                            <li>Privacy</li>
+                            <li>Terrms</li>
+                        </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>  
+    </div>
+
+    </div>
+
+
+
+</footer>
+
+<!-- This is the end of the footer sectiion --> 
+
+<!-- -->
+   </div>
+</body>
+</html>

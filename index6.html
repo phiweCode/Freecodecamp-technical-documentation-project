@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="javascript.js" defer ></script>
+    <title>Create a New React App - React</title>
+
+</head>
+
+<body> 
+
+    <!-- The showcase area contains both main technical document and its navbar-->
+
+   <div class="showcase-area">   
+
+       <!-- This is the main section of the Technical documentation -->
+
+         <main id="main-doc">     
+    
+                <div class="main-doc-container">      
+                    
+                   <section class="main-section" id="section_1">  
+
+                              <header><h1>Release Channels</h1></header> 
+
+                              <p class="param1">React relies on a thriving open source community to file bug reports, open pull requests, and <span class="inline-links">submit RFCs</span>. To encourage feedback we sometimes share special builds of React that include unreleased features.</p>  
+                                  
+                              <div class="tip-sections">
+                             
+                                     <p class="params4 keywords">
+                                         This document will be most relevant to developers who work on frameworks, libraries, or developer tooling. Developers who use React primarily to build user-facing applications should not need to worry about our prerelease channels.
+                                    </p>
+                              </div>   
+
+                              <p class="params2"> 
+                                  Each of React’s release channels is designed for a distinct use case:
+                              </p> 
+
+                              <ul>
+                                   <li>Latest is for stable, semver React releases. It’s what you get when you install React from npm. This is the channel you’re already using today. Use this for all user-facing React applications.</li>
+                                   <li>Next tracks the main branch of the React source code repository. Think of these as release candidates for the next minor semver release. Use this for integration testing between React and third party projects.</li>
+                                   <li>Experimental includes experimental APIs and features that aren’t available in the stable releases. These also track the main branch, but with additional feature flags turned on. Use this to try out upcoming features before they are released.</li>
+                              </ul>
+                               
+                               <p class="params2"> 
+                                 All releases are published to npm, but only Latest uses <span class="inline-links">semantic versioning</span>. Prereleases (those in the Next and Experimental channels) have versions generated from a hash of their contents and the commit date, e.g. <spain class="highlight">0.0-68053d940-20210623</spain> for Next and <span class="highlight">0.0.0-experimental-68053d940-20210623</span> for Experimental.
+                               </p> 
+
+                               <p class="params2"> 
+                                  <span class="keyboards">The only officially supported release channel for user-facing applications is Latest</span>. Next and Experimental releases are provided for testing purposes only, and we provide no guarantees that behavior won’t change between releases. They do not follow the semver protocol that we use for releases from Latest.
+                               </p>
+
+                               <p class="params2"> 
+                                   By publishing prereleases to the same registry that we use for stable releases, we are able to take advantage of the many tools that support the npm workflow, like <span class="inline-links">unpkg</span> and <span class="inline-links">CodeSandbox</span>.
+                               </p> 
+
+                               
+                              <div class="sub-sections">
+
+                                      <p class="params2">  
+                                       Create React App doesn’t handle backend logic or databases; it just creates a frontend build pipeline, so you can use it with any backend you want. Under the hood, it uses <span class="inline-links">Babel</span> and <span class="inline-links">webpack</span>, but you don’t need to know anything about them.
+                                       </p> 
+
+                                      <p class="params2">  
+                                      When you’re ready to deploy to production, running <span class="highlight">npm run build</span> will create an optimized <span class="hightlight">build</span> of your app in the build folder. You can learn more about Create React App <span class="inline-links">from its README</span> and the <span class="inline-links">User Guide</span>.
+                                      </p> 
+                                
+                             </div>
+
+                    </section> 
+                </div> 
+         
+        </main> 
+
+                  
+<!-- -->  
+
+<!-- This is the footer section-->  
+
+<footer id="main-footer">
+  
+    <div class="footer-container"> 
+    <nav id="page-nav"> 
+        <div class="article-nav-text"> 
+        <div class="next-article">
+            Next article
+        </div>
+        <div class="a1 Add-react-to-a-webpage">
+            <a class="Add-react" href="">Add React to a Website</a>
+        </div>
+        </div>
+    </nav>
+<div class="sub-footer-wrapper"> 
+    <nav class="sub-footer">
+        <div class="sub-footer-container">
+
+            <div class="copyright">
+
+                <div class="footer-logo">
+                    <img src="./download-footer.png" alt="">
+                </div>
+                <p>Copyright &copy 2022 Meta Platforms, Inc.</p>
+           
+            </div>  
+
+            <div class="footer-links-grid">
+                <div>
+                    <h4>DOCS</h4>
+                        <ul>
+                            <li>Installation</li>
+                            <li>Main Concepts</li>
+                            <li>Advanced Guides</li>
+                            <li>API Reference</li>
+                            <li>Hooks</li>
+                            <li>Testing</li>
+                            <li>Contributing</li>
+                            <li>FAQ</li>
+                        </ul>
+                    
+                </div>
+                <div>
+                    <h4>CHANNELS</h4>
+                        <ul>
+                            <li>GitHub</li>
+                            <li>Stack Overflow</li>
+                            <li>Discussion forums</li>
+                            <li>Reactiflux Chat</li>
+                            <li>DEV Community</li>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                        </ul>
+                  
+                </div>
+                <div>
+                    <h4>COMMUNITY</h4>
+                        <ul>
+                            <li>Code of Conduct</li>
+                            <li>Community Resources</li>
+                        </ul>
+                    
+                </div>
+                <div>
+                    <h4>MORE</h4>
+                        <ul>
+                            <li>Tutorial</li>
+                            <li>Blog</li>
+                            <li>Acknoledgement</li>
+                            <li>React Native</li>
+                            <li>Privacy</li>
+                            <li>Terrms</li>
+                        </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>  
+    </div>
+
+    </div>
+
+
+
+</footer>
+
+<!-- This is the end of the footer sectiion --> 
+
+<!-- -->
+
+
+    </div> 
+
+    </body>
+</html> 
