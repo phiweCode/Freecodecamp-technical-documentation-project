@@ -61,16 +61,113 @@
                                </p> 
 
                                
-                              <div class="sub-sections">
+                              <div class="sub-sections"> 
+
+                                      <h3>Next Channel</h3>
 
                                       <p class="params2">  
-                                       Create React App doesn’t handle backend logic or databases; it just creates a frontend build pipeline, so you can use it with any backend you want. Under the hood, it uses <span class="inline-links">Babel</span> and <span class="inline-links">webpack</span>, but you don’t need to know anything about them.
+                                      The Next channel is a prerelease channel that tracks the main branch of the React repository. We use prereleases in the Next channel as release candidates for the Latest channel. You can think of Next as a superset of Latest that is updated more frequently.
                                        </p> 
 
                                       <p class="params2">  
-                                      When you’re ready to deploy to production, running <span class="highlight">npm run build</span> will create an optimized <span class="hightlight">build</span> of your app in the build folder. You can learn more about Create React App <span class="inline-links">from its README</span> and the <span class="inline-links">User Guide</span>.
+                                   The degree of change between the most recent Next release and the most recent Latest release is approximately the same as you would find between two minor semver releases. However, <span class="keywords">the Next channel does not conform to semantic versioning</span>. You should expect occasional breaking changes between successive releases in the Next channel.
+                                      </p>  
+
+                                      <p class="params2 keywords"> 
+                                          Do not use prereleases in user-facing applications.
                                       </p> 
-                                
+
+                                      <p class="params2"> 
+                                          Releases in Next are published with the <span class="highlight">next</span> tag on npm. Versions are generated from a hash of the build’s contents and the commit date, e.g. <span class="highlight">0.0.0-68053d940-20210623</span>. 
+                                      </p> 
+
+                                      <p class="param1"> 
+                                          Using the Next Channel for Integration Testing
+                                      </p> 
+
+                                      <p class="params2">The Next channel is designed to support integration testing between React and other projects.</p>
+                                      <p class="params2">All changes to React go through extensive internal testing before they are released to the public. However, there are a myriad of environments and configurations used throughout the React ecosystem, and it’s not possible for us to test against every single one.</p>
+                                      <p class="params2">If you’re the author of a third party React framework, library, developer tool, or similar infrastructure-type project, you can help us keep React stable for your users and the entire React community by periodically running your test suite against the most recent changes. If you’re interested, follow these steps:</p>
+                                           
+                                      <ul>
+                                           <li>
+                                               Set up a cron job using your preferred continuous integration platform. Cron jobs are supported by both <span class="inline-links">CircleCI</span> and <span class="inline-links">Travis CI</span>.
+                                           </li>
+                                           <li>In the cron job, update your React packages to the most recent React release in the Next channel, using <span class="highlight">next</span> tag on npm. Using the npm cli:</li>
+                                      </ul> 
+
+                                      <div class="code">
+                                          <span class="javascript-syntax"> 
+                                              <span class="variable"> 
+                                                  npm update react@next react-dom@next
+                                              </span>
+                                          </span>
+                                      </div> 
+                                       
+                                      <p class="params2"> 
+                                               Or yarn:
+                                      </p>
+
+                                      <div class="code">
+                                          <span class="javascript-syntax"> 
+                                              <span class="variable"> 
+                                                 yarn upgrade react@next react-dom@next
+                                              </span>
+                                          </span>
+                                      </div> 
+
+                                      <ul>
+                                          <li>
+                                              Run your test suite against the updated packages.
+                                          </li>
+                                          <li>
+                                              If everything passes, great! You can expect that your project will work with the next minor React release.
+                                          </li>
+                                          <li>
+                                              If something breaks unexpectedly, please let us know by <span class="inline-links">filing an issue</span>.
+                                          </li>
+                                      </ul> 
+
+                                      <p class="params2"> 
+                                          A project that uses this workflow is Next.js. (No pun intended! Seriously!) You can refer to their <span class="inline-links"> CircleCI configuration</span> as an example.
+                                      </p> 
+
+                                       <div class="sub-sections"> 
+
+                                             <h3>Experimental Channel</h3>  
+
+                                             <p class="params2"> 
+                                                 Like Next, the Experimental channel is a prerelease channel that tracks the main branch of the React repository. Unlike Next, Experimental releases include additional features and APIs that are not ready for wider release.
+                                             </p> 
+
+                                             <p class="params2">
+                                                 Usually, an update to Next is accompanied by a corresponding update to Experimental. They are based on the same source revision, but are built using a different set of feature flags.
+                                             </p> 
+
+                                             <p class="params2"> 
+                                                 Experimental releases may be significantly different than releases to Next and Latest. <span class="keywords">Do not use Experimental releases in user-facing applications</span>. You should expect frequent breaking changes between releases in the Experimental channel.
+                                             </p> 
+
+                                             <p class="params2"> 
+                                                 Releases in Experimental are published with the <span class="highlight">experimental tag</span> on npm. Versions are generated from a hash of the build’s contents and the commit date, e.g. <span class="highlight">0.0.0-experimental-68053d940-20210623</span>.
+                                             </p>
+
+
+                                      </div> 
+
+                                      <div class="sub-sections"> 
+
+                                             <p class="param1">How Can I Learn More About Experimental Features?</h3>   
+
+                                              <p class="params2">Experimental features may or may not be documented. Usually, experiments aren’t documented until they are close to shipping in Next or Latest.</p>
+                                              <p class="params2">If a feature is not documented, they may be accompanied by an <span class="inline-links">RFC</span>.</p>
+                                              <p class="params2">We will post to the <span class="inline-links">React blog</span> when we’re ready to announce new experiments, but that doesn’t mean we will publicize every experiment.</p>
+                                              <p class="params2">You can always refer to our public GitHub repository’s <span class="inline-links">history</span> for a comprehensive list of changes.</p>
+                                            
+                                      </div>
+
+
+
                              </div>
 
                     </section> 

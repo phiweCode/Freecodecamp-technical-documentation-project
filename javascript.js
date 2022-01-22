@@ -21,7 +21,9 @@ let stylesInput1 = {
 
  
 
-
+/* The focus and blur functions are for the state of the input field that 
+responds by a background change when a user provides input to the input field.
+*/
 const onfocusFunction = () =>  
 { 
        inputSearch.style.backgroundColor = "#99999952"
@@ -46,7 +48,9 @@ const navReloader = (char) =>
 
  }); 
 
-}   
+}    
+
+navReloader();
 
 
 navHeaders.map((each,ind,arr)=> 
@@ -69,7 +73,7 @@ navHeaders.map((each,ind,arr)=>
        }
     ) 
      
-    navReloader();
+
 
 
     $(function () {
@@ -128,8 +132,5 @@ navHeaders.map((each,ind,arr)=>
       ); 
        
 
- $(document).ready(() => {
-   $("#Docs").prop("checked", true);
-   $("#INSTALLATION").prop("checked", true);
- });
+
 
