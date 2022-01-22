@@ -1,10 +1,12 @@
 let navHeaders =Array.from(document.querySelectorAll(".header-radio")); 
+
+let iFrame = document.querySelector('#iframe')
  
-let checkMark = document.querySelectorAll(".checkmark");
+let checkMark = Array.from(document.querySelectorAll(".checkmark"));
 
 let lists = Array.from(document.querySelectorAll(".dropdowns"));
 
-let navLinks = document.querySelectorAll('[name="nav-links"]')
+let navLinks = Array.from(document.querySelectorAll('[name="nav-links"]'))
  
 let inputSearch = document.querySelector(".search-div");  
 
@@ -17,7 +19,62 @@ let stylesInput1 = {
     "width":"100%",
     "height":"100%",
     "overflow":"auto"
-}
+} 
+
+lists.forEach(item=>
+    Object.assign(item.style,{ 
+    "height": "0",
+   "width": "0",
+   "overflow": "hidden",
+    })
+  )  
+
+  navLinks.map((item,i,arr)=>
+     {  
+            
+
+       item.addEventListener("click",()=>
+       {
+              if(item.checked === true)
+              { 
+                 item.parentElement.style.fontWeight = "700"
+                 arr.map(sibs=>
+                   {
+                     if(sibs != item)
+                     {
+                       sibs.parentElement.style.fontWeight = "400"
+                     }
+                   }
+                  
+                  ) 
+
+                  switch(i)
+                  {   
+                    case 0:
+                      iFrame.setAttribute("src", "./index2.html");
+                      break; 
+                    case 1:
+                      iFrame.setAttribute("src", "./index3.html");
+                      break; 
+                    case 2:
+                      iFrame.setAttribute("src", "./index4.html");
+                      break; 
+                    case 3:
+                      iFrame.setAttribute("src", "./index5.html");
+                      break; 
+                    case 4:
+                      iFrame.setAttribute("src", "./index6.html");
+                      break; 
+
+                  }
+                     
+                 
+                  
+              }
+       }
+       )
+     }
+    )
 
  
 
@@ -33,7 +90,7 @@ const onblurFunction = () =>
 { 
        inputSearch.style.backgroundColor = "transparent";
 }
-
+// this is the end of the text input field functionality 
 
 const navReloader = (char) => 
 {  
@@ -50,12 +107,13 @@ const navReloader = (char) =>
 
 }    
 
-navReloader();
+
+
 
 
 navHeaders.map((each,ind,arr)=> 
        {  
-           
+         
         each.addEventListener("click",()=>
              {   
                if(each.checked === true)
@@ -64,33 +122,39 @@ navHeaders.map((each,ind,arr)=>
 
                    each.parentElement.style.color = "#000";  
                   
-                   arr.forEach(item=> { 
-                    if(item != each){ item.parentElement.style.color = "#6d6d6d"; } 
-                                      }) 
+                   arr.forEach((item,index)=> { 
+                    if(item != each)
+                    { 
+                      item.parentElement.style.color = "#6d6d6d";
+                      Object.assign(lists[index].style, {
+                        height: "0",
+                        width: "0",
+                        overflow: "hidden",
+                      });
+                    
+                     } 
+                        }) 
                }
            }) 
         
        }
     ) 
+    
      
 
 
 
     $(function () {
       $(".header-radio").click(function () {
-        var $radio = $(this);
-      
+        var $radio = $(this); 
+
         // if this was previously checked
 
         if ($radio.data("waschecked") == true) { 
           $radio.prop("checked", false);
           $radio.data("waschecked", false);  
-           /*
-              $(".dropdowns").eq($(".header-radio").index($radio)).css({
-                width: "0",
-                height: "0",
-                overflow: "hidden",
-              }); */ 
+                
+         navReloader();
 
            $(".nav-header-label").css({
              color: "#6d6d6d",
@@ -98,11 +162,15 @@ navHeaders.map((each,ind,arr)=>
 
         } else 
         {     
-            $radio.data("waschecked", true);    
+            $radio.data("waschecked", true);     
+              
+          
         }   
         // remove was checked from other radios
 
-        $radio.siblings(".header-radio").data("waschecked", false);
+        $radio.siblings(".header-radio").data("waschecked", false); 
+          
+
         
       });
     });  

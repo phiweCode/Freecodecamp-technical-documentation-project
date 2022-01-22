@@ -187,7 +187,8 @@ iframe
 { 
     margin: 0;
     padding:0; 
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    overflow-y: visible;
 }
 
 #main-doc
@@ -523,11 +524,13 @@ hr
    outline: none;
    background-color: transparent;
    color:#6d6d6d;  
+
 }   
 
 .dropdowns
 {
    padding-top: 0.3em;  
+
 
 }  
 
@@ -596,7 +599,9 @@ ul
 .nav-header-label:hover
 { 
    color : #1a1a1a; 
-}
+} 
+
+
  
 .close
  {
