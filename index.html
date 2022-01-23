@@ -24,7 +24,7 @@
 
    <nav id="main-nav">
        <ul class="page-links">
-           <li class="nav_li"> <label for="Docs"> <input class="main_header_radio" id="Docs" type="radio" name="main_nav" ></input> Docs</label> </li>
+           <li class="nav_li"> <label for="Docs"> <input class="main_header_radio" id="Docs" type="radio" name="main_nav" checked></input> Docs</label> </li>
            <li class="nav_li"><label for="Tutorial"> <input class="main_header_radio" id="Tutorial" type="radio" name="main_nav"></input>Tutorial</label></li>
            <li class="nav_li"><label for="Blog"> <input class="main_header_radio" id="Blog" type="radio" name="main_nav"></input>Blog</label></li>
            <li class="nav_li"><label for="Community"> <input class="main_header_radio" id="Community" type="radio" name="main_nav"></input>Community</label></li>
@@ -33,8 +33,8 @@
 
    <div class="search-and-lang">
     <div class="search-div" >
-        <i class="fa fa-magnifying-glass"></i> 
-        <input id="search-textarea" type="text" placeholder="Search" onfocus="onfocusFunction()" onblur="onblurFunction()">
+        <i class="fa fa-magnifying-glass" onclick="searchFocus()"></i> 
+        <input id="search-textarea" class="onFocus onBlur" type="text" placeholder="Search" onfocus="onfocusFunction()" onblur="onblurFunction()">
     </div>
     <div>
         v17.0.2
