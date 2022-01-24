@@ -15,19 +15,28 @@ a {
 #main-header {
   position: fixed;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-items: start;
+  justify-content: space-between ;
   background-color: #20232a;
   font-weight: 300;
   font-size: 18px;
   line-height: 18px;
-  width: 100vw;
-}
+  width: 100vw; 
+  margin: 0;
+  padding: 0; 
+
+
+} 
+
 
 #logo {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;   
+  margin-left:4.6em;
+  margin-right:2em;
+
 }
 
 #logo img {
@@ -50,12 +59,10 @@ a {
 }
 
 #main-nav {
-  display: flex;
+  display: center;
   align-items: start;
-  justify-content: start;
-  height: 100%;
-  margin-right: 100px;
-  margin-left: 36px;
+  justify-content: center;
+  height: 100%; 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
@@ -76,20 +83,19 @@ a {
   color: #fff;
   height: 100%;
   padding: 0;
-  min-width: 400px;
+  min-width: fit-content;
   cursor: pointer;
-  background-color: magenta;
 }
 .page-links li {
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  height: 100%;
-  min-width: 60px;
+  height: 60px;
+  min-width: 70px;
   width: fit-content;
   user-select: none;
-  margin-right: 10px;
+  margin-right: 20px;
   cursor: pointer;
 }
 
@@ -103,14 +109,15 @@ a {
   justify-content: space-evenly;
   color: #fff;
   font-size: 14px;
-  height: 60px;
+  height: 60px; 
+  margin-right: 7em;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 .search-and-lang div {
-  margin: 5px;
-  padding-right: 0.5em;
+ 
+  padding-right: 0.9em;
 }
 
 .search-and-lang div :hover {
@@ -121,7 +128,8 @@ a {
   display: flex;
   align-items: center;
   height: 1.7em;
-  padding: 0 5px;
+  padding: 0 5px; 
+  margin-right:15px;
   border-radius: 3px;
   background-color: transparent;
 }
@@ -131,7 +139,7 @@ a {
   font-size: 18px;
   font-weight: 300;
   padding: 0 10px;
-  width: 180px;
+  width: 160px;
   margin-right: 15px;
   background-color: transparent;
   color: #ffffff;
@@ -640,23 +648,56 @@ ul {
 
 /* The following are the media queries */
 
-@media screen and (max-width: 1190px) {
-  .search-and-lang {
-    height: 52px;
-  }
+@media screen and (max-width: 1279px) 
+{    
+     #logo 
+     { 
+         margin-right:1em;
+     }
 
-  .nav-li {
-    padding: 0 1px;
-    margin-right: 1px;
-  }
-  .nav_li label {
+    .search-and-lang , .page-links li
+    {
+        height:50px;
+    }     
+
+    .search-and-lang
+     { 
+         margin-right: 0em;
+     } 
+
+     .page-links 
+     { 
+         min-width: 350px; 
+         margin-right:1em;
+     }
+
+    .page-links li 
+    { 
+        margin-right: 0;
+    } 
+
+ .nav_li label {
     font-size: 16px;
     line-height: 18px;
-  }
+     } 
+
+    .onBlur
+     { 
+         width:150px;
+     }
+   
+     .search-and-lang
+     { 
+         margin-right:7em;
+     }
+
+}
+
+@media screen and (max-width: 1179px) {
 
   #logo {
-    margin: 0;
-    padding: 0;
+    margin-left:1em;  
+    margin-right:0; 
   }
 
   #logo img {
@@ -664,33 +705,35 @@ ul {
   }
 
   #logo p {
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   #main-header {
     padding-left: 3.8em;
     padding-right: 1em;
-  }
+  }  
 
-  #main-nav {
-    margin-left: 4em;
-    margin-right: 3em;
+  #main-nav 
+  { 
+      margin-right: 7em;
   }
 
   .search-and-lang {
     position: relative;
+    margin-right:7em;
   }
 
   .search-div {
     position: absolute;
-    right: 21.7em;
+    right: 19.5em;
     transition: all 0.5s ease;
   }
 
   .onBlur {
     position: absolute;
-    width: 0px;
+    width: 0px; 
+    overflow: hidden;
     transition: all 0.3s ease-in-out;
   }
 
@@ -699,23 +742,123 @@ ul {
     width: 100px;
     transition: all 0.3s ease-in-out;
   }
+} 
+
+@media screen and (max-width: 1098px)
+{ 
+    #main-nav 
+    { 
+        margin-right: 2em; 
+    }
 }
 
-@media screen and (max-width: 979px) {
+@media screen and (max-width: 979px) {  
+ 
+    #main-header 
+      { 
+          margin-right:2em;
+      } 
+
+    #logo 
+    { 
+        margin-right:0;
+        margin-left: 0;
+    } 
+
+    #logo p 
+    { 
+        font-size: 16px;
+        line-height: 20px; 
+    } 
+
+    .page-links li 
+    { 
+        min-width: 50px; 
+        margin-right:10px;
+    }
+  
+  .search-and-lang 
+  { 
+      margin-right:5em;
+  } 
+
+  .search-and-lang div {
+    padding: 0 10px;
+  }
+
   .Github {
     position: absolute;
     width: 0;
     height: 0;
     overflow: hidden;
-  }
+  } 
 
   .search-div {
     position: absolute;
-    right: 14em;
+    right: 13em;
   }
 
   #main-nav {
-    margin-left: 15px;
-    margin-right: 1em;
+    margin-right: 4.5em;
   }
-}
+} 
+
+@media screen and (max-width: 920px) 
+{  
+    #main-header 
+    { 
+        margin-left:0;
+        padding-left: 3.5em;
+    }
+
+    #main-nav {
+    margin-right: 0.5em;
+  } 
+
+
+
+  .page-links 
+  { 
+      margin-right: 0; 
+      padding-right:0;
+  }
+}  
+
+@media screen and (max-width:779px)
+ {   
+     #logo , #logo p
+     { 
+         padding: 0; 
+         margin: 0;
+     } 
+     
+    #main-header 
+    { 
+        padding-left: 1em;
+    }
+     .main-header-txt
+     {
+         position:absolute;  
+         width:0px;
+         height:0px;
+         overflow: hidden;
+
+     }  
+
+     .search-and-lang 
+     { 
+         margin-right:2em; 
+         margin-left: 1em;
+     }
+
+ .search-div {
+    position: absolute;
+    right: 3em;
+  } 
+   
+  #main-nav 
+  { 
+      margin-right: 0;
+  }
+
+ }
