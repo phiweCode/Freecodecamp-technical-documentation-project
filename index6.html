@@ -31,12 +31,17 @@
 
                               <p class="param1">React relies on a thriving open source community to file bug reports, open pull requests, and <span class="inline-links">submit RFCs</span>. To encourage feedback we sometimes share special builds of React that include unreleased features.</p>  
                                   
-                              <div class="tip-sections">
-                             
-                                     <p class="params4 keywords">
-                                         This document will be most relevant to developers who work on frameworks, libraries, or developer tooling. Developers who use React primarily to build user-facing applications should not need to worry about our prerelease channels.
-                                    </p>
-                              </div>   
+                              <div class="sub-sections ">  
+
+                              <div class="forTips"> 
+                                <div class="tip-sections">
+                                
+                                        <p class="params4 keywords">
+                                            This document will be most relevant to developers who work on frameworks, libraries, or developer tooling. Developers who use React primarily to build user-facing applications should not need to worry about our prerelease channels.
+                                        </p>
+                                </div>   
+                              </div>
+                              </div>
 
                               <p class="params2"> 
                                   Each of React’s release channels is designed for a distinct use case:
@@ -95,18 +100,42 @@
                                            </li>
                                            <li>In the cron job, update your React packages to the most recent React release in the Next channel, using <span class="highlight">next</span> tag on npm. Using the npm cli:</li>
                                       </ul> 
+                                    
 
+                                      <div class="forCode"> 
+                                                 
+                                        <!-- Ghost--> 
+                                           
+                                         <span class="javascript-syntax"> 
+                                              <span class="variable"> 
+                                                  npm update react@next react-dom@next
+                                              </span>
+                                          </span>
+
+                                        <!-- Busted-->
+                                     
                                       <div class="code">
                                           <span class="javascript-syntax"> 
                                               <span class="variable"> 
                                                   npm update react@next react-dom@next
                                               </span>
                                           </span>
-                                      </div> 
+                                      </div>  
+                                      </div>
                                        
                                       <p class="params2"> 
                                                Or yarn:
-                                      </p>
+                                      </p> 
+
+                                       <div class="forCode"> 
+                                                 
+                                        <!-- Ghost-->  
+                                            <span class="javascript-syntax"> 
+                                              <span class="variable"> 
+                                                 yarn upgrade react@next react-dom@next
+                                              </span>
+                                          </span>
+                                        <!-- Busted -->
 
                                       <div class="code">
                                           <span class="javascript-syntax"> 
@@ -114,7 +143,8 @@
                                                  yarn upgrade react@next react-dom@next
                                               </span>
                                           </span>
-                                      </div> 
+                                      </div>  
+                                      </div>
 
                                       <ul>
                                           <li>

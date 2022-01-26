@@ -4,8 +4,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
 
+}   
+
+ 
 a {
   text-decoration: none;
   color: #282c34;
@@ -14,7 +16,8 @@ a {
 
 #main-header {
   position: fixed;
-  display: flex;
+  display: flex; 
+  right:0;
   flex-direction: row;
   align-items: center;
   justify-content: space-between ;
@@ -24,7 +27,7 @@ a {
   line-height: 18px;
   width: 100vw; 
   margin: 0;
-  padding: 0; 
+  padding: 0 5em 0 0; 
 
 
 } 
@@ -35,7 +38,7 @@ a {
   align-items: center;
   justify-content: center;   
   margin-left:4.6em;
-  margin-right:2em;
+  margin-right:3em;
 
 }
 
@@ -63,6 +66,8 @@ a {
   align-items: start;
   justify-content: center;
   height: 100%; 
+  margin-right: 4em;
+  margin-left:1.5em;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
@@ -111,6 +116,7 @@ a {
   font-size: 14px;
   height: 60px; 
   margin-right: 7em;
+  margin-left: 1.5em;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
@@ -175,7 +181,7 @@ iframe {
   padding: 0;
   box-sizing: border-box;
   overflow-y: visible;
-}
+}   
 
 #main-doc {
   background-color: #ffffff;
@@ -205,7 +211,8 @@ hr {
   margin: 25px 0 0 0;
 }
 
-.sub-sections {
+.sub-sections { 
+  position: relative; 
   padding: 2em 0;
 }
 
@@ -259,9 +266,22 @@ hr {
   background-color: #ffe56433;
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+} 
+
+.forTips 
+{ 
+  position:relative;  
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em 1.5em;
+  min-height: 8em; 
+  width: 100%;
 }
 
-.tip-sections {
+.tip-sections { 
+  position:absolute;  
+  left:-3em;
   margin-bottom: 20px;
   margin-top: 20px;
 }
@@ -283,6 +303,7 @@ hr {
   font-weight: 400;
   background-color: #ffe5644d;
   border-left: 8px solid #ffe564;
+  width:100%; 
 }
 
 .main-section ul {
@@ -335,18 +356,37 @@ hr {
 .feedback-wrapper {
   height: 5em;
   margin-bottom: 6em;
-}
+} 
 
-.code {
-  background-color: #282c34;
+.forCode 
+ { 
+  position:relative;    
+  visibility: hidden; 
+
+  background-color: transparent;
   margin: 1em 0;
   padding: 1em 2em;
   border-radius: 15px;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 20px; 
   font-weight: 400;
+ }
+
+.code { 
+  position: absolute;
+  visibility: visible; 
+  top:0; 
+  left:-4em;
+  background-color: #3a3c3f;
+  margin: 1em 0;
+  padding: 1em 2em;
+  border-radius: 15px;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 14px;
+  line-height: 20px; 
+  font-weight: 400; 
+  width:100%; 
 }
 
 .html-comment {
@@ -408,12 +448,19 @@ hr {
   padding-bottom: 10em;
   background-color: #f7f7f7;
   overflow-y: scroll;
+} 
+
+.nav::-webkit-scrollbar
+{ 
+   position: absolute; 
+   width:0;
+   height:0;  
 }
 
 #navbar {
   position: absolute;
   top: 4em;
-  left: 1.5em;
+  left: 1em;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -689,11 +736,40 @@ ul {
      .search-and-lang
      { 
          margin-right:7em;
-     }
+     } 
+
+       .param1 
+  { 
+    font-size: 18px; 
+    line-height: 31px;
+    font-weight: 300;
+  } 
+
+  .large-header 
+  { 
+    font-size: 24px; 
+    line-height: 29px; 
+  }
+
+  .sub-sections { 
+    padding-right:2.8em;
+  }  
+
+  
+
+  #main-doc 
+  { 
+    margin-right:15em;
+  }
 
 }
 
-@media screen and (max-width: 1179px) {
+@media screen and (max-width: 1179px) { 
+
+  #main-doc 
+   {
+     margin-right:18em;
+   }
 
   #logo {
     margin-left:1em;  
@@ -741,22 +817,54 @@ ul {
     position: relative;
     width: 100px;
     transition: all 0.3s ease-in-out;
-  }
+  } 
+
+  .nav  
+   { 
+     top:3.1em;
+   }
+
+
 } 
 
-@media screen and (max-width: 1098px)
+@media screen and (max-width: 1099px)
 { 
     #main-nav 
     { 
         margin-right: 2em; 
-    }
+    } 
+
+    .nav 
+    { 
+      min-width:275px ;
+    } 
+
+    #navbar 
+    { 
+      left: 0px; 
+
+    } 
+
+    ul {
+      position: relative;
+      padding-left: 1.5em;
+     } 
+   
+  #main-doc {
+  background-color: #ffffff;
+  padding: 0 5.5em;
+  margin-right: 11em;
+  } 
+
 }
 
 @media screen and (max-width: 979px) {  
  
     #main-header 
       { 
-          margin-right:2em;
+         
+          margin-left: 0;
+          height: 50px;
       } 
 
     #logo 
@@ -778,8 +886,9 @@ ul {
     }
   
   .search-and-lang 
-  { 
-      margin-right:5em;
+  {   
+      margin-right:5em; 
+      margin-left: 2em;
   } 
 
   .search-and-lang div {
@@ -796,11 +905,42 @@ ul {
   .search-div {
     position: absolute;
     right: 13em;
-  }
+  } 
+   
+   #main-doc {
+  background-color: #ffffff;
+  padding: 0 4em;
+  margin-right: 9em;
+  }  
 
-  #main-nav {
-    margin-right: 4.5em;
-  }
+   .sub-sections h3 
+   { 
+     font-size: 20px;
+    line-height:24px; 
+   }
+
+  .large-header 
+  { 
+    font-size: 20px;
+    line-height:24px; 
+  } 
+
+  .params2 , .keywords
+  { 
+    font-size: 16px;
+    line-height:27px; 
+  }  
+
+
+
+  .tip-sections 
+  {  
+    font-size: 16px;
+    line-height: 27px; 
+    padding: 1em 3em; 
+    width: 100%;
+  } 
+
 } 
 
 @media screen and (max-width: 920px) 
@@ -815,20 +955,35 @@ ul {
     margin-right: 0.5em;
   } 
 
-
-
   .page-links 
   { 
       margin-right: 0; 
       padding-right:0;
+  } 
+
+  header h1  
+  { 
+    padding-right:1.3em;
+  } 
+
+  .tip-sections 
+  { 
+    width:98%;
   }
 }  
 
 @media screen and (max-width:779px)
- {   
+ {    
+    header h1  
+    { 
+      font-size: 40px;
+      line-height: 45px; 
+      margin-top: 40px;
+    }
+
      #logo , #logo p
      { 
-         padding: 0; 
+         padding: 10px; 
          margin: 0;
      } 
      
@@ -858,7 +1013,85 @@ ul {
    
   #main-nav 
   { 
-      margin-right: 0;
+      margin-right: 6em;
+  } 
+
+     .nav 
+    { 
+      min-width:230px ;
+    }  
+
+    #main-doc { 
+    padding: 0 1em;
+     
+    } 
+
+    .param1
+    { 
+      padding-right:6em;
+    }
+
+ }  
+
+  @media screen and (max-width: 650px)
+ { 
+         
+  #main-nav 
+  { 
+      margin-right: 1em;
   }
+ }
+
+ @media screen and (max-width: 599px)
+ {  
+   .nav
+   {
+     top:40px;
+   }
+    #main-header 
+    { 
+      padding-right: 3em;
+      height:40px;
+    }
+
+   #logo
+   { 
+     width: fit-content;
+   }
+    
+   #logo p 
+   { 
+     position:absolute;  
+     right:1000em;;
+     width:0;
+     height: 0; 
+     overflow: hidden;
+   }
+   
+   #main-nav 
+   { 
+     margin-right: 0em;
+     margin-left: 0; 
+     padding-right: 0em;
+   } 
+   
+   .search-and-lang , .page-links li
+   { 
+     height: 40px;
+   }
+
+   .search-and-lang 
+   { 
+     margin-right: 0em;
+   } 
+
+   .page-links
+   { 
+     margin-right: 3em; 
+     min-width:100px;
+   }
+
+
+
 
  }
