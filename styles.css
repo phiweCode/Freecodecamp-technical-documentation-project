@@ -1045,12 +1045,43 @@ ul {
  @media screen and (max-width: 599px)
  {  
    .nav
+   { 
+     width:100vw; 
+     height: 100vh;
+     top:40px; 
+     z-index: 1;
+
+   } 
+
+   #navbar 
+   { 
+     top:8px;
+     left:1.1em; 
+     padding-bottom: 20vh;
+   } 
+
+   .header-radio, .nav-header-label
+   { 
+     pointer-events: none;
+   } 
+
+   select 
+   { 
+     display: none;
+   }
+
+   #navbar div div label {
+          margin-left:10px; 
+        
+   } 
+
+   .menu
    {
-     top:40px;
+     margin-bottom: 8px;
    }
     #main-header 
     { 
-      padding-right: 3em;
+      padding-right: 1em;
       height:40px;
     }
 
@@ -1070,7 +1101,7 @@ ul {
    
    #main-nav 
    { 
-     margin-right: 0em;
+     margin-right: 3em;
      margin-left: 0; 
      padding-right: 0em;
    } 
@@ -1089,9 +1120,108 @@ ul {
    { 
      margin-right: 3em; 
      min-width:100px;
+   } 
+
+   .circularBtn 
+   { 
+     position: fixed; 
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     bottom:6.5vh;
+     right:3em;
+     height: 60px;
+     width: 60px; 
+     border-radius: 50%;
+     background-color:#20232a;
+     z-index: 3000; 
+   } 
+
+   .arrowDown,.arrowUp
+   { 
+     position:absolute;
+     height:10px;
+     width:10px; 
+     border:3px solid #61dafb; 
+     border-top: none;
+     border-right:none;   
+     pointer-events: none;
+     transition: all 0.3s ease-in-out;
+  
+   }  
+
+   .arrowDown 
+   {   
+        transform:  translateY(-5px) rotate(135deg); 
+
+   
+   }
+   .arrowUp
+   { 
+     transform: translateY(5px) rotate(-45deg); 
+   }    
+
+   #Btn 
+   {  position: absolute; 
+       width:0; 
+       height:0; 
    }
 
+   #Btn:checked ~ .arrowDown 
+   {
+        transform:  translateY(6px) rotate(135deg);  
+        transition: all 0.3s ease-in-out;
+   }
 
+   #Btn:checked ~ .arrowUp
+   {
+        transform:  translateY(-6px) rotate(-45deg); 
+        transition: all 0.3s ease-in-out;
+   }    
+
+   .navUnchecked
+    { 
+      display: none;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+
+   .navSpan
+   {
+     position: absolute;
+     width: 0;
+     height: 0;
+   } 
+
+   #main-doc
+   { 
+     margin-right: 0em; 
+     padding-left: 1em;
+     padding-right: 0;
+   } 
+
+   .sub-sections
+   { 
+     margin-right:0;
+     padding-left:1em; 
+     padding-right:0;
+   } 
+
+   .code, .tip-sections
+   { 
+     left:-40px;
+     width:fit-content;
+     min-width: 100%;
+     border-radius: 0;
+   } 
+
+   .tip-sections
+   { 
+     border:none;
+   }
+
+   
 
 
  }

@@ -16,7 +16,9 @@ let inputNavArr = Array.from(inputNav);
 
 let viewport = window.matchMedia("(max-width: 1115px)");
 
-let searchInput = document.querySelector("#search-textarea");
+let searchInput = document.querySelector("#search-textarea"); 
+
+const Btn = document.querySelector("#Btn");
 
 let stylesInput1 = {
   width: "100%",
@@ -147,7 +149,7 @@ $(function () {
 
     $(".nav_li").css({
       "border-bottom": "none",
-      color: "#ffffff",
+      "color": "#ffffff",
     });
 
     if ($radio.prop("checked")) {
@@ -164,3 +166,32 @@ $(function () {
 const searchFocus = () => {
   document.querySelector(".onBlur").focus();
 };
+
+/// This fuctionality is for when the viewport width is <=599px
+
+const navReloader2 = (screenWidth) => {
+  $(".header-radio").each(function () {
+    if (screenWidth.matches) {
+      $(".dropdowns")
+        .eq($(".header-radio").index($(this)))
+        .css({
+          width: "100%",
+          height: "100%",
+        });
+    }
+  });
+}; 
+
+
+//button feature for the width <=599px nav menu
+
+Btn.addEventListener("click", () => {
+
+    document.querySelector(".nav").classList.toggle("navUnchecked");
+
+});
+
+const screenWidth = window.matchMedia("(max-width:700px)");
+navReloader2(screenWidth);
+screenWidth.addEventListener(navReloader2);
+
