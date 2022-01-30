@@ -428,8 +428,15 @@ hr {
   line-height: 20px; 
   font-weight: 400; 
   width:100%; 
-}
+} 
 
+.img-container
+{ 
+
+  display: flex;
+  justify-content: center; 
+  padding-right:5em;
+}
 .html-comment {
   color: #b2b2b2;
 }
@@ -822,7 +829,8 @@ hr {
 
 }
 
-@media screen and (max-width: 1179px) { 
+@media screen and (max-width: 1179px) 
+{ 
 
   #main-doc 
    {
@@ -886,7 +894,12 @@ hr {
 } 
 
 @media screen and (max-width: 1099px)
-{ 
+{    
+
+     header h1 
+      {
+        padding-right:3em;
+      }
     #main-nav 
     { 
         margin-right: 2em; 
@@ -910,13 +923,65 @@ hr {
    
   #main-doc {
   background-color: #ffffff;
-  padding: 0 5.5em;
+
+  margin-left:4.6em; 
   margin-right: 11em;
+ 
+  }   
+
+  
+  .sub-sections { 
+    padding-right:5em;
+  }    
+  
+    .sub-sections ul li { 
+       
+      padding-right: 2em;
+    }
+
+  .sub-sections h3 
+  { 
+     font-size: 19px;
+     line-height: 25px;
+  }
+
+  .tip-sections
+  { 
+    left:-1.75em;  
+     padding-right:3em;
+
   } 
 
+  .code 
+  { 
+    width:91.5%;
+  }
+
+  .sub-sections h5
+   { 
+     font-size: 24px;
+     line-height: 29px;
+   }
+
+} 
+
+
+@media screen and (max-width: 999px)
+{ 
+  #main-doc 
+  { 
+    margin-left:0.2em; 
+  } 
+
+  .large-header
+   { 
+     font-size: 24px;
+     line-height: 29px;
+   }
 }
 
-@media screen and (max-width: 979px) {  
+@media screen and (max-width: 979px) 
+{  
  
     #main-header 
       { 
@@ -968,7 +1033,7 @@ hr {
    #main-doc {
   background-color: #ffffff;
   padding: 0 4em;
-  margin-right: 9em;
+  margin-right: 5em;
   }  
 
    .sub-sections h3 
@@ -1076,7 +1141,7 @@ hr {
 
      .nav 
     { 
-      min-width:230px ;
+      min-width:220px ;
     }  
 
     #main-doc { 
@@ -1086,22 +1151,29 @@ hr {
 
     .param1
     { 
-      padding-right:6em;
+      padding-right:4em;
     }
 
  }  
 
-  @media screen and (max-width: 650px)
+@media screen and (max-width: 650px)
  { 
          
   #main-nav 
   { 
       margin-right: 1em;
   }
- }
+ } 
 
- @media screen and (max-width: 599px)
- {  
+
+
+@media screen and (max-width: 599px)
+ {   
+    header h1  
+    { 
+      padding:0;
+    }
+
    .nav
    { 
      width:100vw; 
@@ -1186,13 +1258,14 @@ hr {
      display: flex;
      align-items: center;
      justify-content: center;
-     bottom:6.5vh;
-     right:3em;
+     bottom:7.5vh;
+     right:1.3em;
      height: 60px;
      width: 60px; 
      border-radius: 50%;
      background-color:#20232a;
-     z-index: 3000; 
+     z-index: 3000;  
+     box-shadow: 0px 0px 2px;
    } 
 
    .arrowDown,.arrowUp
@@ -1254,7 +1327,7 @@ hr {
 
    #main-doc
    { 
-     margin-right: 0em; 
+     margin-right: 14em; 
      padding-left: 0em;
      padding-right: 0;
    } 
@@ -1281,9 +1354,9 @@ hr {
 
    .code, .tip-sections
    { 
-     left:-1em;
+     left:-1.8em;
      width:fit-content;
-     min-width: 100%;
+     min-width: 107.5%;
      border-radius: 0;
    } 
 
@@ -1298,6 +1371,11 @@ hr {
     padding-left: 2em;
   }
    
+ } 
 
-
+ @media screen and (max-width: 570px) {
+   #main-doc 
+   {
+     margin-right: 0;
+   }
  }

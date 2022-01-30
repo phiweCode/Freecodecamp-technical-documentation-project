@@ -4,314 +4,387 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="javascript.js" defer ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="javascript.js" defer></script>
     <title>Create a New React App - React</title>
 
 </head>
 
-<body> 
+<body>
 
     <!-- The showcase area contains both main technical document and its navbar-->
 
-   <div class="showcase-area">   
+        <div class="showcase-area">
 
-       <!-- This is the main section of the Technical documentation -->
+        <!-- This is the main section of the Technical documentation -->
 
-         <main id="main-doc">     
-    
-                <div class="main-doc-container">      
-                    
-                   <section class="main-section" id="section_1">  
+        <!-- User story #1-->
+        <main id="main-doc">
 
-                              <header><h1>Release Channels</h1></header> 
+            <div class="main-doc-container">
 
-                              <p class="param1">React relies on a thriving open source community to file bug reports, open pull requests, and <span class="inline-links">submit RFCs</span>. To encourage feedback we sometimes share special builds of React that include unreleased features.</p>  
-                                  
-                              <div class="sub-sections ">  
+                <!-- User story #2 -->
+                <section class="main-section" id="Release_Channels">
 
-                              <div class="forTips">  
-                                     
-                                <!-- This is the ghost markup-->  
-                                    
-                                          <p class="params4 keywords">
-                                            This document will be most relevant to developers who work on frameworks, libraries, or developer tooling. Developers who use React primarily to build user-facing applications should not need to worry about our prerelease channels.
-                                          </p>
+                    <header>
+                        <h1>Release Channels</h1>
+                    </header>
 
-                                <!-- This is the ghost busted-->
+                    <div class="sub-sections ">
 
-                                 
-                                <div class="tip-sections">
-                                
-                                        <p class="params4 keywords">
-                                            This document will be most relevant to developers who work on frameworks, libraries, or developer tooling. Developers who use React primarily to build user-facing applications should not need to worry about our prerelease channels.
-                                        </p>
-                                </div>    
+                        <p class="param1">React relies on a thriving open source community to file bug reports, open
+                            pull requests, and <span class="inline-links">submit RFCs</span>. To encourage feedback we
+                            sometimes share special builds of React that include unreleased features.</p>
+                    </div>
 
-                              </div>
-                              </div>
+                    <div class="sub-sections">
 
-                              <p class="params2"> 
-                                  Each of React’s release channels is designed for a distinct use case:
-                              </p> 
+                        <div class="forTips">
 
-                              <ul>
-                                   <li>Latest is for stable, semver React releases. It’s what you get when you install React from npm. This is the channel you’re already using today. Use this for all user-facing React applications.</li>
-                                   <li>Next tracks the main branch of the React source code repository. Think of these as release candidates for the next minor semver release. Use this for integration testing between React and third party projects.</li>
-                                   <li>Experimental includes experimental APIs and features that aren’t available in the stable releases. These also track the main branch, but with additional feature flags turned on. Use this to try out upcoming features before they are released.</li>
-                              </ul>
-                               
-                               <p class="params2"> 
-                                 All releases are published to npm, but only Latest uses <span class="inline-links">semantic versioning</span>. Prereleases (those in the Next and Experimental channels) have versions generated from a hash of their contents and the commit date, e.g. <spain class="highlight">0.0-68053d940-20210623</spain> for Next and <span class="highlight">0.0.0-experimental-68053d940-20210623</span> for Experimental.
-                               </p> 
+                            <!-- This is the ghost markup-->
 
-                               <p class="params2"> 
-                                  <span class="keyboards">The only officially supported release channel for user-facing applications is Latest</span>. Next and Experimental releases are provided for testing purposes only, and we provide no guarantees that behavior won’t change between releases. They do not follow the semver protocol that we use for releases from Latest.
-                               </p>
+                            <p class="params4 keywords">
+                                This document will be most relevant to developers who work on frameworks, libraries, or
+                                developer tooling. Developers who use React primarily to build user-facing applications
+                                should not need to worry about our prerelease channels.
+                            </p>
 
-                               <p class="params2"> 
-                                   By publishing prereleases to the same registry that we use for stable releases, we are able to take advantage of the many tools that support the npm workflow, like <span class="inline-links">unpkg</span> and <span class="inline-links">CodeSandbox</span>.
-                               </p> 
-
-                               
-                              <div class="sub-sections"> 
-
-                                      <h3>Next Channel</h3>
-
-                                      <p class="params2">  
-                                      The Next channel is a prerelease channel that tracks the main branch of the React repository. We use prereleases in the Next channel as release candidates for the Latest channel. You can think of Next as a superset of Latest that is updated more frequently.
-                                       </p> 
-
-                                      <p class="params2">  
-                                   The degree of change between the most recent Next release and the most recent Latest release is approximately the same as you would find between two minor semver releases. However, <span class="keywords">the Next channel does not conform to semantic versioning</span>. You should expect occasional breaking changes between successive releases in the Next channel.
-                                      </p>  
-
-                                      <p class="params2 keywords"> 
-                                          Do not use prereleases in user-facing applications.
-                                      </p> 
-
-                                      <p class="params2"> 
-                                          Releases in Next are published with the <span class="highlight">next</span> tag on npm. Versions are generated from a hash of the build’s contents and the commit date, e.g. <span class="highlight">0.0.0-68053d940-20210623</span>. 
-                                      </p> 
-
-                                      <p class="param1"> 
-                                          Using the Next Channel for Integration Testing
-                                      </p> 
-
-                                      <p class="params2">The Next channel is designed to support integration testing between React and other projects.</p>
-                                      <p class="params2">All changes to React go through extensive internal testing before they are released to the public. However, there are a myriad of environments and configurations used throughout the React ecosystem, and it’s not possible for us to test against every single one.</p>
-                                      <p class="params2">If you’re the author of a third party React framework, library, developer tool, or similar infrastructure-type project, you can help us keep React stable for your users and the entire React community by periodically running your test suite against the most recent changes. If you’re interested, follow these steps:</p>
-                                           
-                                      <ul>
-                                           <li>
-                                               Set up a cron job using your preferred continuous integration platform. Cron jobs are supported by both <span class="inline-links">CircleCI</span> and <span class="inline-links">Travis CI</span>.
-                                           </li>
-                                           <li>In the cron job, update your React packages to the most recent React release in the Next channel, using <span class="highlight">next</span> tag on npm. Using the npm cli:</li>
-                                      </ul> 
-                                    
-
-                                      <div class="forCode"> 
-                                                 
-                                        <!-- Ghost--> 
-                                           
-                                         <span class="javascript-syntax"> 
-                                              <span class="variable"> 
-                                                  npm update react@next react-dom@next
-                                              </span>
-                                          </span>
-
-                                        <!-- Busted-->
-                                     
-                                      <div class="code">
-                                          <span class="javascript-syntax"> 
-                                              <span class="variable"> 
-                                                  npm update react@next react-dom@next
-                                              </span>
-                                          </span>
-                                      </div>  
-                                      </div>
-                                       
-                                      <p class="params2"> 
-                                               Or yarn:
-                                      </p> 
-
-                                       <div class="forCode"> 
-                                                 
-                                        <!-- Ghost-->  
-                                            <span class="javascript-syntax"> 
-                                              <span class="variable"> 
-                                                 yarn upgrade react@next react-dom@next
-                                              </span>
-                                          </span>
-                                        <!-- Busted -->
-
-                                      <div class="code">
-                                          <span class="javascript-syntax"> 
-                                              <span class="variable"> 
-                                                 yarn upgrade react@next react-dom@next
-                                              </span>
-                                          </span>
-                                      </div>  
-                                      </div>
-
-                                      <ul>
-                                          <li>
-                                              Run your test suite against the updated packages.
-                                          </li>
-                                          <li>
-                                              If everything passes, great! You can expect that your project will work with the next minor React release.
-                                          </li>
-                                          <li>
-                                              If something breaks unexpectedly, please let us know by <span class="inline-links">filing an issue</span>.
-                                          </li>
-                                      </ul> 
-
-                                      <p class="params2"> 
-                                          A project that uses this workflow is Next.js. (No pun intended! Seriously!) You can refer to their <span class="inline-links"> CircleCI configuration</span> as an example.
-                                      </p> 
-
-                                       <div class="sub-sections"> 
-
-                                             <h3>Experimental Channel</h3>  
-
-                                             <p class="params2"> 
-                                                 Like Next, the Experimental channel is a prerelease channel that tracks the main branch of the React repository. Unlike Next, Experimental releases include additional features and APIs that are not ready for wider release.
-                                             </p> 
-
-                                             <p class="params2">
-                                                 Usually, an update to Next is accompanied by a corresponding update to Experimental. They are based on the same source revision, but are built using a different set of feature flags.
-                                             </p> 
-
-                                             <p class="params2"> 
-                                                 Experimental releases may be significantly different than releases to Next and Latest. <span class="keywords">Do not use Experimental releases in user-facing applications</span>. You should expect frequent breaking changes between releases in the Experimental channel.
-                                             </p> 
-
-                                             <p class="params2"> 
-                                                 Releases in Experimental are published with the <span class="highlight">experimental tag</span> on npm. Versions are generated from a hash of the build’s contents and the commit date, e.g. <span class="highlight">0.0.0-experimental-68053d940-20210623</span>.
-                                             </p>
+                            <!-- This is the ghost busted-->
 
 
-                                      </div> 
+                            <div class="tip-sections">
 
-                                      <div class="sub-sections"> 
+                                <p class="params4 keywords">
+                                    This document will be most relevant to developers who work on frameworks, libraries,
+                                    or developer tooling. Developers who use React primarily to build user-facing
+                                    applications should not need to worry about our prerelease channels.
+                                </p>
+                            </div>
 
-                                             <p class="param1">How Can I Learn More About Experimental Features?</h3>   
+                        </div>
+                    </div>
 
-                                              <p class="params2">Experimental features may or may not be documented. Usually, experiments aren’t documented until they are close to shipping in Next or Latest.</p>
-                                              <p class="params2">If a feature is not documented, they may be accompanied by an <span class="inline-links">RFC</span>.</p>
-                                              <p class="params2">We will post to the <span class="inline-links">React blog</span> when we’re ready to announce new experiments, but that doesn’t mean we will publicize every experiment.</p>
-                                              <p class="params2">You can always refer to our public GitHub repository’s <span class="inline-links">history</span> for a comprehensive list of changes.</p>
-                                            
-                                      </div>
+                    <div class="sub-sections">
 
+                        <p class="params2">
+                            Each of React’s release channels is designed for a distinct use case:
+                        </p>
 
-
-                             </div>
-
-                    </section> 
-                </div> 
-         
-        </main> 
-
-                  
-<!-- -->  
-
-<!-- This is the footer section-->  
-
-<footer id="main-footer">
-  
-    <div class="footer-container"> 
-    <nav id="page-nav"> 
-        <div class="article-nav-text"> 
-        <div class="next-article">
-            Next article
-        </div>
-        <div class="a1 Add-react-to-a-webpage">
-            <a class="Add-react" href="">Add React to a Website</a>
-        </div>
-        </div>
-    </nav>
-<div class="sub-footer-wrapper"> 
-    <nav class="sub-footer">
-        <div class="sub-footer-container">
-
-            <div class="copyright">
-
-                <div class="footer-logo">
-                    <img src="./download-footer.png" alt="">
-                </div>
-                <p>Copyright &copy 2022 Meta Platforms, Inc.</p>
-           
-            </div>  
-
-            <div class="footer-links-grid">
-                <div>
-                    <h4>DOCS</h4>
                         <ul>
-                            <li>Installation</li>
-                            <li>Main Concepts</li>
-                            <li>Advanced Guides</li>
-                            <li>API Reference</li>
-                            <li>Hooks</li>
-                            <li>Testing</li>
-                            <li>Contributing</li>
-                            <li>FAQ</li>
+                            <li>Latest is for stable, semver React releases. It’s what you get when you install React
+                                from npm. This is the channel you’re already using today. Use this for all user-facing
+                                React applications.</li>
+                            <li>Next tracks the main branch of the React source code repository. Think of these as
+                                release candidates for the next minor semver release. Use this for integration testing
+                                between React and third party projects.</li>
+                            <li>Experimental includes experimental APIs and features that aren’t available in the stable
+                                releases. These also track the main branch, but with additional feature flags turned on.
+                                Use this to try out upcoming features before they are released.</li>
                         </ul>
-                    
-                </div>
-                <div>
-                    <h4>CHANNELS</h4>
+
+                        <p class="params2">
+                            All releases are published to npm, but only Latest uses <span class="inline-links">semantic
+                                versioning</span>. Prereleases (those in the Next and Experimental channels) have
+                            versions generated from a hash of their contents and the commit date, e.g. <spain
+                                class="highlight">0.0-68053d940-20210623</spain> for Next and <span
+                                class="highlight">0.0.0-experimental-68053d940-20210623</span> for Experimental.
+                        </p>
+
+                        <p class="params2">
+                            <span class="keyboards">The only officially supported release channel for user-facing
+                                applications is Latest</span>. Next and Experimental releases are provided for testing
+                            purposes only, and we provide no guarantees that behavior won’t change between releases.
+                            They do not follow the semver protocol that we use for releases from Latest.
+                        </p>
+
+                        <p class="params2">
+                            By publishing prereleases to the same registry that we use for stable releases, we are able
+                            to take advantage of the many tools that support the npm workflow, like <span
+                                class="inline-links">unpkg</span> and <span class="inline-links">CodeSandbox</span>.
+                        </p>
+
+                    </div>
+
+                    <div class="sub-sections">
+
+                        <h3>Next Channel</h3>
+
+                        <p class="params2">
+                            The Next channel is a prerelease channel that tracks the main branch of the React
+                            repository. We use prereleases in the Next channel as release candidates for the Latest
+                            channel. You can think of Next as a superset of Latest that is updated more frequently.
+                        </p>
+
+                        <p class="params2">
+                            The degree of change between the most recent Next release and the most recent Latest release
+                            is approximately the same as you would find between two minor semver releases. However,
+                            <span class="keywords">the Next channel does not conform to semantic versioning</span>. You
+                            should expect occasional breaking changes between successive releases in the Next channel.
+                        </p>
+
+                        <p class="params2 keywords">
+                            Do not use prereleases in user-facing applications.
+                        </p>
+
+                        <p class="params2">
+                            Releases in Next are published with the <span class="highlight">next</span> tag on npm.
+                            Versions are generated from a hash of the build’s contents and the commit date, e.g. <span
+                                class="highlight">0.0.0-68053d940-20210623</span>.
+                        </p>
+
+                        <p class="param1">
+                            Using the Next Channel for Integration Testing
+                        </p>
+
+                        <p class="params2">The Next channel is designed to support integration testing between React and
+                            other projects.</p>
+                        <p class="params2">All changes to React go through extensive internal testing before they are
+                            released to the public. However, there are a myriad of environments and configurations used
+                            throughout the React ecosystem, and it’s not possible for us to test against every single
+                            one.</p>
+                        <p class="params2">If you’re the author of a third party React framework, library, developer
+                            tool, or similar infrastructure-type project, you can help us keep React stable for your
+                            users and the entire React community by periodically running your test suite against the
+                            most recent changes. If you’re interested, follow these steps:</p>
+
                         <ul>
-                            <li>GitHub</li>
-                            <li>Stack Overflow</li>
-                            <li>Discussion forums</li>
-                            <li>Reactiflux Chat</li>
-                            <li>DEV Community</li>
-                            <li>Facebook</li>
-                            <li>Twitter</li>
+                            <li>
+                                Set up a cron job using your preferred continuous integration platform. Cron jobs are
+                                supported by both <span class="inline-links">CircleCI</span> and <span
+                                    class="inline-links">Travis CI</span>.
+                            </li>
+                            <li>In the cron job, update your React packages to the most recent React release in the Next
+                                channel, using <span class="highlight">next</span> tag on npm. Using the npm cli:</li>
                         </ul>
-                  
-                </div>
-                <div>
-                    <h4>COMMUNITY</h4>
+
+
+                        <div class="forCode">
+
+                            <!-- Ghost-->
+
+                            <span class="javascript-syntax">
+                                <span class="variable">
+                                    npm update react@next react-dom@next
+                                </span>
+                            </span>
+
+                            <!-- Busted-->
+
+                            <div class="code">
+                                <span class="javascript-syntax">
+                                    <span class="variable">
+                                        npm update react@next react-dom@next
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <p class="params2">
+                            Or yarn:
+                        </p>
+
+                        <div class="forCode">
+
+                            <!-- Ghost-->
+                            <span class="javascript-syntax">
+                                <span class="variable">
+                                    yarn upgrade react@next react-dom@next
+                                </span>
+                            </span>
+                            <!-- Busted -->
+
+                            <div class="code">
+                                <span class="javascript-syntax">
+                                    <span class="variable">
+                                        yarn upgrade react@next react-dom@next
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+
                         <ul>
-                            <li>Code of Conduct</li>
-                            <li>Community Resources</li>
+                            <li>
+                                Run your test suite against the updated packages.
+                            </li>
+                            <li>
+                                If everything passes, great! You can expect that your project will work with the next
+                                minor React release.
+                            </li>
+                            <li>
+                                If something breaks unexpectedly, please let us know by <span
+                                    class="inline-links">filing an issue</span>.
+                            </li>
                         </ul>
-                    
-                </div>
-                <div>
-                    <h4>MORE</h4>
-                        <ul>
-                            <li>Tutorial</li>
-                            <li>Blog</li>
-                            <li>Acknoledgement</li>
-                            <li>React Native</li>
-                            <li>Privacy</li>
-                            <li>Terrms</li>
-                        </ul>
-                    
-                </div>
+
+                        <p class="params2">
+                            A project that uses this workflow is Next.js. (No pun intended! Seriously!) You can refer to
+                            their <span class="inline-links"> CircleCI configuration</span> as an example.
+                        </p>
+
+                        <div class="sub-sections">
+
+                            <h3>Experimental Channel</h3>
+
+                            <p class="params2">
+                                Like Next, the Experimental channel is a prerelease channel that tracks the main branch
+                                of the React repository. Unlike Next, Experimental releases include additional features
+                                and APIs that are not ready for wider release.
+                            </p>
+
+                            <p class="params2">
+                                Usually, an update to Next is accompanied by a corresponding update to Experimental.
+                                They are based on the same source revision, but are built using a different set of
+                                feature flags.
+                            </p>
+
+                            <p class="params2">
+                                Experimental releases may be significantly different than releases to Next and Latest.
+                                <span class="keywords">Do not use Experimental releases in user-facing
+                                    applications</span>. You should expect frequent breaking changes between releases in
+                                the Experimental channel.
+                            </p>
+
+                            <p class="params2">
+                                Releases in Experimental are published with the <span class="highlight">experimental
+                                    tag</span> on npm. Versions are generated from a hash of the build’s contents and
+                                the commit date, e.g. <span
+                                    class="highlight">0.0.0-experimental-68053d940-20210623</span>.
+                            </p>
+
+
+                        </div>
+
+                        <div class="sub-sections">
+
+                            <p class="param1">How Can I Learn More About Experimental Features?</h3>
+
+                                <p class="params2">Experimental features may or may not be documented. Usually,
+                                    experiments aren’t documented until they are close to shipping in Next or Latest.
+                                </p>
+                                <p class="params2">If a feature is not documented, they may be accompanied by an <span
+                                        class="inline-links">RFC</span>.</p>
+                                <p class="params2">We will post to the <span class="inline-links">React blog</span> when
+                                    we’re ready to announce new experiments, but that doesn’t mean we will publicize
+                                    every experiment.</p>
+                                <p class="params2">You can always refer to our public GitHub repository’s <span
+                                        class="inline-links">history</span> for a comprehensive list of changes.</p>
+
+                        </div>
+
+
+
+                    </div>
+
+                </section>
+
             </div>
-        </div>
-    </nav>  
-    </div>
 
-    </div>
+         </main> 
+
+         </div>
+
+        <!-- -->
+
+        <!-- This is the footer section-->
+
+        <footer id="main-footer">
+
+            <div class="footer-container">
+                <nav id="page-nav">
+                    <div class="article-nav-text">
+                        <div class="next-article">
+                            Next article
+                        </div>
+                        <div class="a1 Add-react-to-a-webpage">
+                            <a class="Add-react" href="">Add React to a Website</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="sub-footer-wrapper">
+                    <nav class="sub-footer">
+                        <div class="sub-footer-container">
+
+                            <div class="copyright">
+
+                                <div class="footer-logo">
+                                    <img src="./download-footer.png" alt="">
+                                </div>
+                                <p>Copyright &copy 2022 Meta Platforms, Inc.</p>
+
+                            </div>
+
+                            <div class="footer-links-grid">
+                                <div>
+                                    <h4>DOCS</h4>
+                                    <ul>
+                                        <li>Installation</li>
+                                        <li>Main Concepts</li>
+                                        <li>Advanced Guides</li>
+                                        <li>API Reference</li>
+                                        <li>Hooks</li>
+                                        <li>Testing</li>
+                                        <li>Contributing</li>
+                                        <li>FAQ</li>
+                                    </ul>
+
+                                </div>
+                                <div>
+                                    <h4>CHANNELS</h4>
+                                    <ul>
+                                        <li>GitHub</li>
+                                        <li>Stack Overflow</li>
+                                        <li>Discussion forums</li>
+                                        <li>Reactiflux Chat</li>
+                                        <li>DEV Community</li>
+                                        <li>Facebook</li>
+                                        <li>Twitter</li>
+                                    </ul>
+
+                                </div>
+                                <div>
+                                    <h4>COMMUNITY</h4>
+                                    <ul>
+                                        <li>Code of Conduct</li>
+                                        <li>Community Resources</li>
+                                    </ul>
+
+                                </div>
+                                <div>
+                                    <h4>MORE</h4>
+                                    <ul>
+                                        <li>Tutorial</li>
+                                        <li>Blog</li>
+                                        <li>Acknoledgement</li>
+                                        <li>React Native</li>
+                                        <li>Privacy</li>
+                                        <li>Terrms</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
 
 
 
-</footer>
+         </footer>
 
-<!-- This is the end of the footer sectiion --> 
+        <!-- This is the end of the footer sectiion -->
 
-<!-- -->
+        <!-- -->
+        
 
+    
 
-    </div> 
+</body>
 
-    </body>
-</html> 
+</html>
