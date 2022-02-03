@@ -2,29 +2,19 @@ let navHeaders = Array.from(document.querySelectorAll(".header-radio"));
 
 let iFrame = document.querySelector("#iframe");
 
-let checkMark = Array.from(document.querySelectorAll(".checkmark"));
-
 let lists = Array.from(document.querySelectorAll(".dropdowns"));
 
 let navLinks = Array.from(document.querySelectorAll('[name="nav-links"]'));
 
 let inputSearch = document.querySelector(".search-div");
 
-let inputNav = document.querySelectorAll('[name="main_nav"]');
+const Btn = document.querySelector("#Btn");  
 
-let inputNavArr = Array.from(inputNav);
 
-let viewport = window.matchMedia("(max-width: 1115px)");
+//-------//
 
-let searchInput = document.querySelector("#search-textarea"); 
-
-const Btn = document.querySelector("#Btn");
-
-let stylesInput1 = {
-  width: "100%",
-  height: "100%",
-  overflow: "auto",
-};
+/* the lists variable is a nodelist containing li elements which are the subheaders under each header in the side nav section. They are hidden
+by default which is what the code below does. It hides the subheaders  */
 
 lists.forEach((item, ind, arr) =>
   Object.assign(item.style, {
@@ -34,10 +24,60 @@ lists.forEach((item, ind, arr) =>
   })
 );
 
-const onLoad = () => {
-  navHeaders[0].checked = true;
-  lists[0].checked = true;
-};
+//---------//
+
+
+//  The stylesInput1 object is a collection of css styles to be applied on a click event of the nav headers. 
+
+
+let stylesInput1 = {
+  width: "100%",
+  height: "100%",
+  overflow: "auto",
+}; 
+
+/* 
+   The navHeadersFunc handles the three effects that are triggered when clicking on the headers on the side navbar section.
+   These effects are a text color change, the collapse of the header to reveal subheaders and to close other headers.  
+*/
+
+
+const navHeadersFunc=(stylesInput1)=>
+{ 
+navHeaders.map((each, ind, arr) => {
+  each.addEventListener("click", () => {
+  
+    if (each.checked === true) {
+             
+
+      //The object assign code allows the header that recieved a click to collapse and reveal the subheaders 
+      Object.assign(lists[ind].style, stylesInput1);
+
+      //This code  changes the text color of the active header 
+      each.parentElement.style.color = "#000";
+
+      //This forEach method on the arr array hides the subheaders of the inactive headers and gives the  header  text color a gray default color 
+      arr.forEach((item, index) => {
+        if (item != each) {
+          item.parentElement.style.color = "#6d6d6d";
+          Object.assign(lists[index].style, {
+            height: "0",
+            width: "0",
+            overflow: "hidden",
+          });
+        }
+      });
+    }
+  });
+}); 
+}  
+navHeadersFunc(stylesInput1);
+
+//--------//
+
+/* The navLinks variable is a nodelist of anchor tags which when clicked change the display the html in an iframe of the hmtl document that 
+they are linked to.Along with this function the text content of each anchor tag changes color and its font weight  to emphasize the active
+document on display*/
 
 navLinks.map((item, i, arr) => {
   item.addEventListener("click", () => {
@@ -70,8 +110,13 @@ navLinks.map((item, i, arr) => {
   });
 });
 
+
+
+//--------//
+
 /* The focus and blur functions are for the state of the input field that 
-responds by a background change when a user provides input to the input field. 
+responds by a background color change when a user provides input to the input field. Moreover, on smaller screen sizes the text input field
+is hidden with only the magnifying glass visible however when this icon is clicked the textarea is made visible
 */
 
 const onfocusFunction = () => {
@@ -82,9 +127,17 @@ const onblurFunction = () => {
   inputSearch.style.backgroundColor = "transparent";
 };
 
-// this is the end of the text input field functionality
+//---------//
 
-const navReloader = (char) => {
+/*
+ Since the navHeadersFunc only closes the subheaders passively, The navReloader serves to persist the functionality for when you toggle 
+ the navHeaders. On the original website the headers toggle but the default radio  buttons don't have that functionality. The code below 
+ the navReloader is a function that gives the toggle functionality to radio buttons using custom attributes to capture state changes of 
+ a radio button 
+ */
+
+
+const navReloader = () => {
   $(".header-radio").each(function () {
     if (!$(this).prop(":checked"))
       $(".dropdowns")
@@ -95,28 +148,7 @@ const navReloader = (char) => {
           overflow: "hidden",
         });
   });
-};
-
-navHeaders.map((each, ind, arr) => {
-  each.addEventListener("click", () => {
-    if (each.checked === true) {
-      Object.assign(lists[ind].style, stylesInput1);
-
-      each.parentElement.style.color = "#000";
-
-      arr.forEach((item, index) => {
-        if (item != each) {
-          item.parentElement.style.color = "#6d6d6d";
-          Object.assign(lists[index].style, {
-            height: "0",
-            width: "0",
-            overflow: "hidden",
-          });
-        }
-      });
-    }
-  });
-});
+}; 
 
 $(function () {
   $(".header-radio").click(function () {
@@ -140,7 +172,26 @@ $(function () {
 
     $radio.siblings(".header-radio").data("waschecked", false);
   });
-});
+}); 
+
+
+//---------//  
+
+Btn.addEventListener("click", () => {
+  document.querySelector(".nav").classList.toggle("navUnchecked");
+}); 
+
+//--------// 
+
+const searchFocus = () => {
+  document.querySelector(".onBlur").focus();
+};
+
+/*
+  The function below handles the functionality of the main header navigation links.
+  The nav active linked will recieve a color and a border bottom. 
+*/  
+
 
 $(function () {
   $(".main_header_radio").click(function () {
@@ -150,28 +201,60 @@ $(function () {
     $(".nav_li").css({
       "border-bottom": "none",
       "color": "#ffffff",
-    });
+    });  
 
+    let viewP = window.matchMedia("(max-width: 599px)")  
+
+    viewP.addEventListener("change",()=>
+        { 
+             console.log(viewP.matches);
+        }
+     )
+
+    const navLink = (viewP) =>
+    {   
+
+      if(viewP.matches)
+      { 
+        if ($radio.prop("checked")) {
+         $link.css({
+        "color": "#61dafb",
+      });
+        }
+
+      }else  
+      { 
+          if ($radio.prop("checked")) {
+            $link.css({
+              "border-bottom": "4px solid #61dafb ",
+              color: "#61dafb",
+            });
+          }
+      }
+    }  
+
+    navLink(viewP); 
+
+    /*
     if ($radio.prop("checked")) {
       $link.css({
         "border-bottom": "4px solid #61dafb ",
         color: "#61dafb",
       });
-    }
+    } */ 
+
   });
+
 });
 
-/// tests
+//--------// 
 
-const searchFocus = () => {
-  document.querySelector(".onBlur").focus();
-};
 
 /// This fuctionality is for when the viewport width is <=599px
 
-const navReloader2 = (screenWidth) => {
+const navReloader2 = (screenMaxWidth,screenMinWidth) => {
   $(".header-radio").each(function () {
-    if (screenWidth.matches) {
+    if (screenMaxWidth.matches) {
       $(".dropdowns")
         .eq($(".header-radio").index($(this)))
         .css({
@@ -179,19 +262,29 @@ const navReloader2 = (screenWidth) => {
           height: "100%",
         });
     }
-  });
+    
+    if(screenMinWidth.matches)
+    { 
+       $(".dropdowns")
+         .eq($(".header-radio").index($(this)))
+         .css({
+           width: "0",
+           height: "0",
+         });
+    }
+  }); 
+
+  navReloader2(screenMaxWidth, screenMinWidth);
 }; 
 
 
 //button feature for the width <=599px nav menu
 
-Btn.addEventListener("click", () => {
 
-    document.querySelector(".nav").classList.toggle("navUnchecked");
 
-});
+const screenMaxWidth = window.matchMedia("(max-width:599px)");
 
-const screenWidth = window.matchMedia("(max-width:700px)");
-navReloader2(screenWidth);
-screenWidth.addEventListener(navReloader2);
+const screenMinWidth = window.matchMedia("(min-width:600px)");
+navReloader2(screenMaxWidth,screenMinWidth);
+screenWidth.addEventListener("change",navReloader2);
 
